@@ -3,16 +3,19 @@
   "text": "아이리스랩은 기술을 통해 일상의 불편을 줄이고, \n더 나은 선택과 여유를 만드는 서비스를 설계합니다.",
   "section": [
     {
-      "content": "내 삶에 여유를 더하는 디지털 해결사",
-      "icon": "logo_tumtum.png"
+      "content": "내 삶에 여유를 더하는\n디지털 해결사",
+      "icon": "logo_tumtum.png",
+      "link": "https://tumtum.kr"
     },
     {
       "content": "2026. 09 (예정)",
-      "icon": "logo_e2.png"
+      "icon": "logo_e2.png",
+      "link": "/"
     },
     {
       "content": "2027 (예정)",
-      "icon": "logo_e2.png"
+      "icon": "logo_e2.png",
+      "link": "/"
     }
   ]
 }

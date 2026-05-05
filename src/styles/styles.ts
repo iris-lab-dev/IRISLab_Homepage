@@ -7,14 +7,18 @@ export const Styles = createGlobalStyle`
     }
 
     @font-face {
-        font-family: "Motiva Sans Light";
-        src: url("/fonts/Motiva-Sans-Light.ttf") format("truetype");
+        font-family: "OneStoreMobileGothicTitleFont";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-Title.woff") format("woff");
+        font-weight: normal;
+        font-display: swap;
         font-style: normal;
     }
 
     @font-face {
-        font-family: "Motiva Sans Bold";
-        src: url("/fonts/Motiva-Sans-Bold.ttf") format("truetype");
+        font-family: "OneStoreMobileGothicBody";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-Regular.woff") format("woff");
+        font-weight: normal;
+        font-display: swap;
         font-style: normal;
     }
 
@@ -22,7 +26,7 @@ export const Styles = createGlobalStyle`
     body,
     html,
     a {
-        font-family: 'Motiva Sans Light', sans-serif;
+        font-family: 'OneStoreMobileGothicBody', sans-serif;
     }
 
     html {
@@ -67,7 +71,7 @@ export const Styles = createGlobalStyle`
     h4,
     h5,
     h6 {
-        font-family: 'Motiva Sans Bold', serif;
+        font-family: 'OneStoreMobileGothicTitleFont', sans-serif;
         color: #000;
         font-size: 56px;
         line-height: 1.18;

@@ -46,6 +46,7 @@ export const ServiceSectionOuter = styled("div")`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  align-self: center;
   margin: 0 auto;
   width: min(100%, 1080px);
 `;
@@ -118,7 +119,7 @@ export const MinTitle = styled("h6")`
   line-height: 1.3;
   padding: 0 0 0.75rem;
   color: #000;
-  font-family: "Motiva Sans Bold", sans-serif;
+  font-family: "OneStoreMobileGothicTitleFont", sans-serif;
   font-weight: 700;
   white-space: pre-line;
 `;
@@ -154,7 +155,7 @@ export const HistoryYear = styled("div")`
   min-width: 110px;
   font-size: 3rem;
   line-height: 1;
-  font-family: "Motiva Sans Bold", sans-serif;
+  font-family: "OneStoreMobileGothicTitleFont", sans-serif;
   font-weight: 700;
   color: #000;
 `;
@@ -176,7 +177,7 @@ export const HistoryMonth = styled("span")`
   min-width: 28px;
   font-size: 1rem;
   line-height: 1.6;
-  font-family: "Motiva Sans Bold", sans-serif;
+  font-family: "OneStoreMobileGothicTitleFont", sans-serif;
   font-weight: 700;
 `;
 
