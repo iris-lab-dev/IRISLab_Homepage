@@ -1,9 +1,7 @@
 import { Row, Col } from "antd";
-import { withTranslation, TFunction } from "react-i18next";
-import { SvgIcon } from "../../common/SvgIcon";
+import { withTranslation } from "react-i18next";
 import Container from "../../common/Container";
 
-import i18n from "i18next";
 import {
   FooterSection,
   Title,
@@ -12,13 +10,8 @@ import {
   LogoContainer,
   Para,
   Large,
-  Chat,
   Empty,
   FooterContainer,
-  Language,
-  Label,
-  LanguageSwitch,
-  LanguageSwitchContainer,
 } from "./styles";
 
 interface SocialLinkProps {
@@ -26,11 +19,7 @@ interface SocialLinkProps {
   src: string;
 }
 
-const Footer = ({ t }: { t: TFunction }) => {
-  const handleChange = (language: string) => {
-    i18n.changeLanguage(language);
-  };
-
+const Footer = () => {
   const SocialLink = ({ href, src }: SocialLinkProps) => {
     return (
       <a
@@ -40,7 +29,7 @@ const Footer = ({ t }: { t: TFunction }) => {
         key={src}
         aria-label={src}
       >
-        <SvgIcon src={src} width="25px" height="25px" />
+        <img src={`/img/svg/${src}`} alt={src} width="25px" height="25px" />
       </a>
     );
   };
@@ -50,62 +39,33 @@ const Footer = ({ t }: { t: TFunction }) => {
       <FooterSection>
         <Container>
           <Row justify="space-between">
-            <Col lg={10} md={10} sm={12} xs={12}>
-              <Language>{t("Contact")}</Language>
-              <Large to="/">{t("Tell us everything")}</Large>
+            <Col lg={16} md={16} sm={24} xs={24}>
+              {/* <Title>이익을 넘어 가치를,</Title>
+              <Title>경쟁을 넘어 선순환을 설계합니다.</Title>
+              <Empty /> */}
               <Para>
-                {t(`Do you have any question? Feel free to reach out.`)}
+                대표 : 홍길동 | 사업자등록번호 : 123-45-67890 사업자정보 확인
               </Para>
-              <a href="mailto:l.qqbadze@gmail.com">
-                <Chat>{t(`Let's Chat`)}</Chat>
-              </a>
+              <Para>
+                주소 : 고구려시 신라구 백제로12길 22, 2층 2482호 (가야동, 아이리스빌딩)
+              </Para>
+              <Para>
+                이메일 : contact@irislab.co.kr | 연락처 : 02-0000-0000
+              </Para>
+              <Para>
+                통신판매업신고번호: 1900-서울강남-9999호 | 직업정보제공사업 신고번호: 서울청 제9999-9999호
+              </Para>
             </Col>
-            <Col lg={8} md={8} sm={12} xs={12}>
-              <Title>{t("Policy")}</Title>
-              <Large to="/">{t("Application Security")}</Large>
-              <Large to="/">{t("Software Principles")}</Large>
-            </Col>
-            <Col lg={6} md={6} sm={12} xs={12}>
-              <Empty />
-              <Large to="/">{t("Support Center")}</Large>
-              <Large to="/">{t("Customer Support")}</Large>
-            </Col>
-          </Row>
-          <Row justify="space-between">
-            <Col lg={10} md={10} sm={12} xs={12}>
-              <Empty />
-              <Language>{t("Address")}</Language>
-              <Para>Rancho Santa Margarita</Para>
-              <Para>2131 Elk Street</Para>
-              <Para>California</Para>
-            </Col>
-            <Col lg={8} md={8} sm={12} xs={12}>
-              <Title>{t("Company")}</Title>
-              <Large to="/">{t("About")}</Large>
-              <Large to="/">{t("Blog")}</Large>
-              <Large to="/">{t("Press")}</Large>
-              <Large to="/">{t("Careers & Culture")}</Large>
-            </Col>
-            <Col lg={6} md={6} sm={12} xs={12}>
-              <Label htmlFor="select-lang">{t("Language")}</Label>
-              <LanguageSwitchContainer>
-                <LanguageSwitch onClick={() => handleChange("en")}>
-                  <SvgIcon
-                    src="united-states.svg"
-                    aria-label="homepage"
-                    width="30px"
-                    height="30px"
-                  />
-                </LanguageSwitch>
-                <LanguageSwitch onClick={() => handleChange("es")}>
-                  <SvgIcon
-                    src="spain.svg"
-                    aria-label="homepage"
-                    width="30px"
-                    height="30px"
-                  />
-                </LanguageSwitch>
-              </LanguageSwitchContainer>
+            <Col lg={6} md={7} sm={24} xs={24}>
+              <Title>Policy</Title>
+              <Large to="/">이용약관</Large>
+              <Large to="/">개인정보처리방침</Large>
+              <Large to="/">개인정보 수집 및 이용 동의</Large>
+              <Large to="/">업무위수탁약관</Large>
+              {/* <Empty />
+              <Title>Support</Title>
+              <Large to="/">Support Center</Large>
+              <Large to="/">Customer Support</Large> */}
             </Col>
           </Row>
         </Container>
@@ -119,11 +79,11 @@ const Footer = ({ t }: { t: TFunction }) => {
           >
             <NavLink to="/">
               <LogoContainer>
-                <SvgIcon
-                  src="logo.svg"
-                  aria-label="homepage"
+                <img
+                  src="/img/png/logo.png"
+                  alt="logo.png"
                   width="101px"
-                  height="64px"
+                  style={{ height: "auto", display: "block" }}
                 />
               </LogoContainer>
             </NavLink>
@@ -144,18 +104,7 @@ const Footer = ({ t }: { t: TFunction }) => {
                 href="https://medium.com/@lashakakabadze/"
                 src="medium.svg"
               />
-              <a
-                href="https://ko-fi.com/Y8Y7H8BNJ"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  height="36"
-                  style={{ border: 0, height: 36 }}
-                  src="https://storage.ko-fi.com/cdn/kofi3.png?v=3"
-                  alt="Buy Me a Coffee at ko-fi.com"
-                />
-              </a>
+              
             </FooterContainer>
           </Row>
         </Container>

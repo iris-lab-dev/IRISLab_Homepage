@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Row, Col, Drawer } from "antd";
 import { withTranslation, TFunction } from "react-i18next";
 import Container from "../../common/Container";
-import { SvgIcon } from "../../common/SvgIcon";
 import { Button } from "../../common/Button";
 import {
   HeaderSection,
@@ -59,7 +58,12 @@ const Header = ({ t }: { t: TFunction }) => {
       <Container>
         <Row justify="space-between">
           <LogoContainer to="/" aria-label="homepage">
-            <SvgIcon src="logo.svg" width="101px" height="64px" />
+            <img
+              src="/img/png/logo.png"
+              alt="logo.png"
+              width="101px"
+              style={{ height: "auto", display: "block" }}
+            />
           </LogoContainer>
           <NotHidden>
             <MenuItem />
