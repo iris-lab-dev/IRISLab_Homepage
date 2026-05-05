@@ -1,5 +1,5 @@
 import { withTranslation, TFunction } from "react-i18next";
-import { Container, TextWrapper, Content } from "./styles";
+import { Container, Title, TextWrapper, Content } from "./styles";
 
 interface Props {
   title: string;
@@ -10,7 +10,7 @@ interface Props {
 const Block = ({ title, content, t }: Props) => {
   return (
     <Container>
-      <h6>{t(title)}</h6>
+      <Title>{t(title)}</Title>
       <TextWrapper>
         <Content>{t(content)}</Content>
       </TextWrapper>

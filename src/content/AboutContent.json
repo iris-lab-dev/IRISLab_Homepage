@@ -1,16 +1,18 @@
 {
-  "title": "Light, fast & responsive",
-  "text": "This template is ready to use, so you don't need to change anything at a component level, unless you want to customize the default styling.",
+  "title": "Service",
+  "text": "아이리스랩은 기술을 통해 일상의 불편을 줄이고, \n더 나은 선택과 여유를 만드는 서비스를 설계합니다.",
   "section": [
     {
-      "title": "Why Antd?",
-      "content": "Ant Design is a React UI library that has a lot of easy-to-use components for building elegant UI.",
-      "icon": "notes.svg"
+      "content": "내 삶에 여유를 더하는 디지털 해결사",
+      "icon": "logo_tumtum.png"
     },
     {
-      "title": "Why styled-components?",
-      "content": "Styled Components gives you total control over your components.",
-      "icon": "notes.svg"
+      "content": "2026. 09 (예정)",
+      "icon": "logo_e2.png"
+    },
+    {
+      "content": "2027 (예정)",
+      "icon": "logo_e2.png"
     }
   ]
 }

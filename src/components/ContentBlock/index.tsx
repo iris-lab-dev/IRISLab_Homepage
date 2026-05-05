@@ -8,12 +8,25 @@ import { SvgIcon } from "../../common/SvgIcon";
 import {
   ContentSection,
   Content,
+  Title,
   ContentWrapper,
+  ServiceSectionOuter,
+  ServiceContentWrapper,
   ServiceWrapper,
+  ServiceRow,
+  ServiceCard,
+  ServiceLogoSlot,
   MinTitle,
   MinPara,
   StyledRow,
   ButtonWrapper,
+  HistoryWrapper,
+  HistoryGroup,
+  HistoryYear,
+  HistoryItems,
+  HistoryItem,
+  HistoryMonth,
+  HistoryText,
 } from "./styles";
 
 const ContentBlock = ({
@@ -21,6 +34,7 @@ const ContentBlock = ({
   title,
   content,
   section,
+  history,
   button,
   t,
   id,
@@ -33,77 +47,122 @@ const ContentBlock = ({
     });
   };
 
+  const hasSection = typeof section === "object" && section.length > 0;
+  const hasHistory = typeof history === "object" && history.length > 0;
+  const hasIcon = Boolean(icon);
+
   return (
     <ContentSection>
       <Fade direction={direction} triggerOnce>
-        <StyledRow
-          justify="space-between"
-          align="middle"
-          id={id}
-          direction={direction}
-        >
-          <Col lg={11} md={11} sm={12} xs={24}>
-            <SvgIcon src={icon} width="100%" height="100%" />
-          </Col>
-          <Col lg={11} md={11} sm={11} xs={24}>
-            <ContentWrapper>
-              <h6>{t(title)}</h6>
-              <Content>{t(content)}</Content>
-              {direction === "right" ? (
-                <ButtonWrapper>
-                  {typeof button === "object" &&
-                    button.map(
-                      (
-                        item: {
-                          color?: string;
-                          title: string;
-                        },
-                        id: number
-                      ) => {
-                        return (
-                          <Button
-                            key={id}
-                            color={item.color}
-                            onClick={() => scrollTo("about")}
-                          >
-                            {t(item.title)}
-                          </Button>
-                        );
-                      }
-                    )}
-                </ButtonWrapper>
-              ) : (
-                <ServiceWrapper>
-                  <Row justify="space-between">
-                    {typeof section === "object" &&
-                      section.map(
+        {hasSection ? (
+          <ServiceSectionOuter>
+            <ServiceContentWrapper id={id}>
+              <Title>{t(title)}</Title>
+              {content ? <Content>{t(content)}</Content> : null}
+              <ServiceWrapper>
+                <ServiceRow gutter={[24, 24]}>
+                  {section.map(
+                    (
+                      item: {
+                        title?: string;
+                        content: string;
+                        icon: string;
+                      },
+                      id: number
+                    ) => {
+                      return (
+                        <Col key={id} lg={7} md={8} sm={12} xs={24}>
+                          <ServiceCard>
+                            <ServiceLogoSlot>
+                              <SvgIcon
+                                src={item.icon}
+                                width="108px"
+                                height="108px"
+                              />
+                            </ServiceLogoSlot>
+                            {/* {item.title ? <MinTitle>{t(item.title)}</MinTitle> : null} */}
+
+                            <MinPara>{t(item.content)}</MinPara>
+                          </ServiceCard>
+                        </Col>
+                      );
+                    }
+                  )}
+                </ServiceRow>
+              </ServiceWrapper>
+            </ServiceContentWrapper>
+          </ServiceSectionOuter>
+        ) : hasHistory ? (
+          <StyledRow justify="space-between" align="middle" id={id} direction={direction}>
+            <Col span={24}>
+              <ContentWrapper>
+                <Title>{t(title)}</Title>
+                <HistoryWrapper>
+                  {history.map((group, groupIndex) => {
+                    return (
+                      <HistoryGroup key={groupIndex}>
+                        <HistoryYear>{t(group.year)}</HistoryYear>
+                        <HistoryItems>
+                          {group.items.map((item, itemIndex) => {
+                            return (
+                              <HistoryItem key={itemIndex}>
+                                <HistoryMonth>{t(item.month)}</HistoryMonth>
+                                <HistoryText>{t(item.content)}</HistoryText>
+                              </HistoryItem>
+                            );
+                          })}
+                        </HistoryItems>
+                      </HistoryGroup>
+                    );
+                  })}
+                </HistoryWrapper>
+              </ContentWrapper>
+            </Col>
+          </StyledRow>
+        ) : (
+          <StyledRow
+            justify="space-between"
+            align="middle"
+            id={id}
+            direction={direction}
+          >
+            {hasIcon ? (
+              <Col lg={11} md={11} sm={12} xs={24}>
+                <SvgIcon src={icon as string} width="100%" height="100%" />
+              </Col>
+            ) : null}
+            <Col lg={hasIcon ? 11 : 24} md={hasIcon ? 11 : 24} sm={hasIcon ? 11 : 24} xs={24}>
+              <ContentWrapper>
+                <Title>{t(title)}</Title>
+                {content ? <Content>{t(content)}</Content> : null}
+                {direction === "right" ? (
+                  <ButtonWrapper>
+                    {typeof button === "object" &&
+                      button.map(
                         (
                           item: {
+                            color?: string;
                             title: string;
-                            content: string;
-                            icon: string;
                           },
                           id: number
                         ) => {
                           return (
-                            <Col key={id} span={11}>
-                              <SvgIcon
-                                src={item.icon}
-                                width="60px"
-                                height="60px"
-                              />
-                              <MinTitle>{t(item.title)}</MinTitle>
-                              <MinPara>{t(item.content)}</MinPara>
-                            </Col>
+                            <Button
+                              key={id}
+                              color={item.color}
+                              onClick={() => scrollTo("about")}
+                            >
+                              {t(item.title)}
+                            </Button>
                           );
                         }
                       )}
-                  </Row>
-                </ServiceWrapper>
-              )}
-            </ContentWrapper>
-          </Col>
-        </StyledRow>
+                  </ButtonWrapper>
+                ) : null}
+              </ContentWrapper>
+            </Col>
+          </StyledRow>
+        )}
       </Fade>
     </ContentSection>
   );

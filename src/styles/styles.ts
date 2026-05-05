@@ -2,6 +2,10 @@ import { createGlobalStyle } from "styled-components";
 
 export const Styles = createGlobalStyle`
 
+    :root {
+        --header-height: 88px;
+    }
+
     @font-face {
         font-family: "Motiva Sans Light";
         src: url("/fonts/Motiva-Sans-Light.ttf") format("truetype");
@@ -21,14 +25,20 @@ export const Styles = createGlobalStyle`
         font-family: 'Motiva Sans Light', sans-serif;
     }
 
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: var(--header-height);
+    }
+
 
     body {
         margin:0;
-        padding:0;
+        padding: var(--header-height) 0 0;
         border: 0;
         outline: 0;
         background: #fff;
         overflow-x: hidden;
+        scroll-snap-type: y mandatory;
     }
 
     a:hover {

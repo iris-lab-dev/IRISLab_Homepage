@@ -1,7 +1,12 @@
 import styled from "styled-components";
 
+export const Title = styled("h6")`
+  white-space: pre-line;
+`;
+
 export const Content = styled("p")`
   margin-top: 1.5rem;
+  white-space: pre-line;
 `;
 
 export const Container = styled("div")`

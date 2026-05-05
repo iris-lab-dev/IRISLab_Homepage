@@ -44,17 +44,17 @@ const Footer = () => {
               <Title>경쟁을 넘어 선순환을 설계합니다.</Title>
               <Empty /> */}
               <Para>
-                대표 : 홍길동 | 사업자등록번호 : 123-45-67890 사업자정보 확인
+                대표 : 이종우 | 사업자등록번호 : (사업자등록 전)
               </Para>
               <Para>
-                주소 : 고구려시 신라구 백제로12길 22, 2층 2482호 (가야동, 아이리스빌딩)
+                주소 : 경상남도 양산시 하북면 지곡1길 8 1동 406호
               </Para>
               <Para>
-                이메일 : contact@irislab.co.kr | 연락처 : 02-0000-0000
+                이메일 : contact@irislab.co.kr | 연락처 : (사업자등록 전)
               </Para>
-              <Para>
+              {/* <Para>
                 통신판매업신고번호: 1900-서울강남-9999호 | 직업정보제공사업 신고번호: 서울청 제9999-9999호
-              </Para>
+              </Para> */}
             </Col>
             <Col lg={6} md={7} sm={24} xs={24}>
               <Title>Policy</Title>
@@ -89,10 +89,10 @@ const Footer = () => {
             </NavLink>
             <FooterContainer>
               <SocialLink
-                href="https://github.com/Adrinlol/create-react-app-adrinlol"
+                href="https://github.com/iris-lab-dev"
                 src="github.svg"
               />
-              <SocialLink
+              {/* <SocialLink
                 href="https://twitter.com/Adrinlolx"
                 src="twitter.svg"
               />
@@ -103,7 +103,7 @@ const Footer = () => {
               <SocialLink
                 href="https://medium.com/@lashakakabadze/"
                 src="medium.svg"
-              />
+              /> */}
               
             </FooterContainer>
           </Row>
