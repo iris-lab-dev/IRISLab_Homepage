@@ -29,17 +29,22 @@ const Footer = () => {
     {
       href: "https://github.com/iris-lab-dev",
       src: "github.svg",
-      label: "@iris-lab-dev",
+      label: "iris-lab-dev",
     },
     {
       href: "https://www.instagram.com/tumtum.kr",
       src: "instagram.svg",
-      label: "@tumtum.kr",
+      label: "tumtum.kr",
     },
     {
       href: "https://www.instagram.com/50days_left",
       src: "instagram.svg",
-      label: "@50days_left",
+      label: "50days_left",
+    },
+    {
+      href: "https://www.youtube.com/@50days_left",
+      src: "youtube.svg",
+      label: "50days_left",
     },
   ];
 

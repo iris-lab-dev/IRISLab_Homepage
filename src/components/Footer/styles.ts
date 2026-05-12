@@ -130,15 +130,16 @@ export const SocialLabel = styled("span")`
 export const FooterContainer = styled("div")`
   max-width: 510px;
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
   justify-content: flex-end;
   gap: 0.75rem;
-  flex-wrap: wrap;
   text-align: center;
-  align-items: center;
+  align-items: start;
   transition: all 0.1s ease-in-out;
 
   a {
+    width: 100%;
     &:hover,
     &:active,
     &:focus {
@@ -148,9 +149,18 @@ export const FooterContainer = styled("div")`
     }
   }
 
+  @media screen and (max-width: 1100px) {
+    grid-template-columns: repeat(2, max-content);
+  }
+
   @media screen and (max-width: 769px) {
-    width: auto;
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, max-content));
     justify-content: flex-start;
+  }
+
+  @media screen and (max-width: 480px) {
+    grid-template-columns: 1fr;
   }
 
   div {
