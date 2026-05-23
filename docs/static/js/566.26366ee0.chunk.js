@@ -1,7 +1,26 @@
-import { Row } from "antd";
-import styled from "styled-components";
+"use strict";(self.webpackChunkmy_app=self.webpackChunkmy_app||[]).push([[566],{2646:(e,t,i)=>{i.d(t,{A:()=>o});var n=i(579);const o=e=>{var t;let{src:i,width:o,height:r}=e;const l="png"===(null===(t=i.split(".").pop())||void 0===t?void 0:t.toLowerCase())?"png":"svg";return(0,n.jsx)("img",{src:`./img/${l}/${i}`,alt:i,width:o,height:r,style:{width:o,height:"auto",display:"block",objectFit:"contain",maxWidth:"100%"}})}},5639:(e,t,i)=>{i.d(t,{$:()=>r});const n=(0,i(9).Ay)("button")`
+  background: ${e=>e.color||"#000"};
+  color: ${e=>e.color?"#000":"#fff"};
+  font-size: 1rem;
+  font-weight: 700;
+  width: 100%;
+  border: 1px solid #edf3f5;
+  border-radius: 4px;
+  padding: 13px 0;
+  cursor: pointer;
+  margin-top: 0.625rem;
+  max-width: 180px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 16px 30px rgb(0 0 0 / 20%);
 
-export const ContentSection = styled("section")`
+  &:hover,
+  &:active,
+  &:focus {
+    color: #fff;
+    border: 1px solid #000;
+    background-color: #000;
+  }
+`;var o=i(579);const r=e=>{let{color:t,children:i,onClick:r}=e;return(0,o.jsx)(n,{color:t,onClick:r,children:i})}},6566:(e,t,i)=>{i.r(t),i.d(t,{default:()=>F});var n=i(4647),o=i(3614),r=i(9281),l=i(5639),s=i(2646),a=i(1319),d=i(9);const c=(0,d.Ay)("section")`
   position: relative;
   min-height: calc(100vh - var(--header-height));
   padding: 8rem 0 4rem;
@@ -13,9 +32,7 @@ export const ContentSection = styled("section")`
   @media only screen and (max-width: 1024px) {
     padding: 4rem 0 4rem;
   }
-`;
-
-export const Title = styled("h6")`
+`,h=(0,d.Ay)("h6")`
   white-space: pre-line;
   color: #404041;
 
@@ -27,9 +44,7 @@ export const Title = styled("h6")`
     color: #D4A017;
     font-weight: 700;
   }
-`;
-
-export const Content = styled("p")`
+`,m=(0,d.Ay)("p")`
   margin: 1.5rem 0 2rem 0;
   white-space: pre-line;
   color: #404041;
@@ -42,15 +57,10 @@ export const Content = styled("p")`
     color: #D4A017;
     font-weight: 700;
   }
-`;
-
-export const StyledRow = styled(Row)`
+`,p=(0,d.Ay)(a.A)`
   width: 100%;
-  flex-direction: ${({ direction }: { direction: string }) =>
-    direction === "left" ? "row" : "row-reverse"};
-`;
-
-export const ContentWrapper = styled("div")`
+  flex-direction: ${e=>{let{direction:t}=e;return"left"===t?"row":"row-reverse"}};
+`,x=(0,d.Ay)("div")`
   position: relative;
   max-width: 540px;
   width: 100%;
@@ -58,13 +68,9 @@ export const ContentWrapper = styled("div")`
   @media only screen and (max-width: 575px) {
     padding-top: 4rem;
   }
-`;
-
-export const HistoryContentWrapper = styled(ContentWrapper)`
+`,g=(0,d.Ay)(x)`
   max-width: 100%;
-`;
-
-export const ServiceSectionOuter = styled("div")`
+`,f=(0,d.Ay)("div")`
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -73,15 +79,13 @@ export const ServiceSectionOuter = styled("div")`
   align-self: center;
   margin: 0 auto;
   width: min(100%, 1080px);
-`;
-
-export const ServiceContentWrapper = styled(ContentWrapper)`
+`,y=(0,d.Ay)(x)`
   max-width: 100%;
   width: 100%;
   text-align: center;
   margin: 0 auto;
 
-  ${Content} {
+  ${m} {
     max-width: 720px;
     margin: 1.5rem auto 2rem;
     text-align: center;
@@ -90,20 +94,16 @@ export const ServiceContentWrapper = styled(ContentWrapper)`
   @media only screen and (max-width: 575px) {
     padding-top: 0;
 
-    ${Content} {
+    ${m} {
       max-width: 100%;
     }
   }
-`;
-
-export const ServiceWrapper = styled("div")`
+`,u=(0,d.Ay)("div")`
   display: flex;
   justify-content: center;
   max-width: 100%;
   width: 100%;
-`;
-
-export const ServiceRow = styled(Row)`
+`,w=(0,d.Ay)(a.A)`
   width: 100%;
   max-width: 1080px;
   margin: 0 auto;
@@ -115,9 +115,7 @@ export const ServiceRow = styled(Row)`
     display: flex;
     justify-content: center;
   }
-`;
-
-export const ServiceCard = styled("div")`
+`,j=(0,d.Ay)("div")`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -127,18 +125,14 @@ export const ServiceCard = styled("div")`
   width: 100%;
   max-width: 280px;
   margin: 0 auto;
-`;
-
-export const ServiceLogoSlot = styled("div")`
+`,A=(0,d.Ay)("div")`
   width: 100%;
   height: 132px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 1.25rem;
-`;
-
-export const MinTitle = styled("h6")`
+`,b=((0,d.Ay)("h6")`
   font-size: 22px;
   line-height: 1.3;
   padding: 0 0 0.75rem;
@@ -146,9 +140,7 @@ export const MinTitle = styled("h6")`
   font-family: "OneStoreMobileGothicTitleFont", sans-serif;
   font-weight: 700;
   white-space: pre-line;
-`;
-
-export const MinPara = styled("p")`
+`,(0,d.Ay)("p")`
   font-size: 13px;
   line-height: 1.7;
   white-space: pre-line;
@@ -165,16 +157,12 @@ export const MinPara = styled("p")`
     color: #D4A017;
     font-weight: 700;
   }
-`;
-
-export const HistoryWrapper = styled("div")`
+`),v=(0,d.Ay)("div")`
   display: flex;
   flex-direction: column;
   gap: 3rem;
   margin-top: 2rem;
-`;
-
-export const HistoryGroup = styled("div")`
+`,M=(0,d.Ay)("div")`
   display: flex;
   align-items: flex-start;
   gap: 2rem;
@@ -183,25 +171,19 @@ export const HistoryGroup = styled("div")`
     flex-direction: column;
     gap: 1rem;
   }
-`;
-
-export const HistoryYear = styled("div")`
+`,S=(0,d.Ay)("div")`
   min-width: 110px;
   font-size: 3rem;
   line-height: 1;
   font-family: "OneStoreMobileGothicTitleFont", sans-serif;
   font-weight: 700;
   color: #404041;
-`;
-
-export const HistoryItems = styled("div")`
+`,T=(0,d.Ay)("div")`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   flex: 1;
-`;
-
-export const HistoryMonthGroup = styled("div")`
+`,k=(0,d.Ay)("div")`
   position: relative;
   display: flex;
   align-items: flex-start;
@@ -220,9 +202,7 @@ export const HistoryMonthGroup = styled("div")`
   @media only screen and (max-width: 575px) {
     gap: 1rem;
   }
-`;
-
-export const HistoryMonthLabel = styled("div")`
+`,I=(0,d.Ay)("div")`
   position: relative;
   min-width: 56px;
   font-size: 1.25rem;
@@ -242,9 +222,7 @@ export const HistoryMonthLabel = styled("div")`
     border-radius: 50%;
     background: #D4A017;
   }
-`;
-
-export const HistoryMonthEntries = styled("div")`
+`,L=(0,d.Ay)("div")`
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -254,9 +232,7 @@ export const HistoryMonthEntries = styled("div")`
   @media only screen and (max-width: 575px) {
     padding-top: 1.85rem;
   }
-`;
-
-export const HistoryItem = styled("div")`
+`,D=(0,d.Ay)("div")`
   display: flex;
   align-items: baseline;
   gap: 1rem;
@@ -265,18 +241,14 @@ export const HistoryItem = styled("div")`
   @media only screen and (max-width: 575px) {
     gap: 0.75rem;
   }
-`;
-
-export const HistoryDay = styled("span")`
+`,H=(0,d.Ay)("span")`
   min-width: 32px;
   font-size: 0.85rem;
   line-height: 1.6;
   font-family: "OneStoreMobileGothicTitleFont", sans-serif;
   font-weight: 600;
   color: #8E8E93;
-`;
-
-export const HistoryText = styled("span")`
+`,$=(0,d.Ay)("span")`
   font-size: 1.02rem;
   line-height: 1.75;
   white-space: pre-line;
@@ -292,9 +264,7 @@ export const HistoryText = styled("span")`
     color: #D4A017;
     font-weight: 700;
   }
-`;
-
-export const ButtonWrapper = styled("div")`
+`,z=(0,d.Ay)("div")`
   display: flex;
   justify-content: space-between;
   max-width: 100%;
@@ -306,4 +276,5 @@ export const ButtonWrapper = styled("div")`
   button:last-child {
     margin-left: 20px;
   }
-`;
+`;var C=i(579);const F=(0,r.C)()((e=>{let{icon:t,title:i,content:r,section:a,history:d,button:F,t:O,id:G,direction:_}=e;const E=e=>({__html:O(e)}),B="object"===typeof a&&a.length>0,W="object"===typeof d&&d.length>0,V=Boolean(t);return(0,C.jsx)(c,{children:(0,C.jsx)(o.zW,{direction:_,triggerOnce:!0,children:B?(0,C.jsx)(f,{children:(0,C.jsxs)(y,{id:G,children:[(0,C.jsx)(h,{dangerouslySetInnerHTML:E(i)}),r?(0,C.jsx)(m,{dangerouslySetInnerHTML:E(r)}):null,(0,C.jsx)(u,{children:(0,C.jsx)(w,{gutter:[24,24],children:a.map(((e,t)=>(0,C.jsx)(n.A,{lg:7,md:8,sm:12,xs:24,children:(0,C.jsxs)(j,{children:[(0,C.jsx)(A,{children:(0,C.jsx)(s.A,{src:e.icon,width:"108px",height:"108px"})}),(0,C.jsx)(b,{dangerouslySetInnerHTML:E(e.content)})]})},t)))})})]})}):W?(0,C.jsx)(p,{justify:"space-between",align:"middle",id:G,direction:_,children:(0,C.jsx)(n.A,{span:24,children:(0,C.jsxs)(g,{children:[(0,C.jsx)(h,{dangerouslySetInnerHTML:E(i)}),(0,C.jsx)(v,{children:d.map(((e,t)=>{const i=e.items.reduce(((e,t)=>{const i=e.find((e=>e.month===t.month));return i?(i.items.push(t),e):(e.push({month:t.month,items:[t]}),e)}),[]);return(0,C.jsxs)(M,{children:[(0,C.jsx)(S,{children:O(e.year)}),(0,C.jsx)(T,{children:i.map(((e,t)=>(0,C.jsxs)(k,{children:[(0,C.jsx)(I,{dangerouslySetInnerHTML:E(e.month)}),(0,C.jsx)(L,{children:e.items.map(((e,t)=>(0,C.jsxs)(D,{children:[e.day?(0,C.jsx)(H,{dangerouslySetInnerHTML:E(e.day)}):null,(0,C.jsx)($,{dangerouslySetInnerHTML:E(e.content)})]},t)))})]},t)))})]},t)}))})]})})}):(0,C.jsxs)(p,{justify:"space-between",align:"middle",id:G,direction:_,children:[V?(0,C.jsx)(n.A,{lg:11,md:11,sm:12,xs:24,children:(0,C.jsx)(s.A,{src:t,width:"100%",height:"100%"})}):null,(0,C.jsx)(n.A,{lg:V?11:24,md:V?11:24,sm:V?11:24,xs:24,children:(0,C.jsxs)(x,{children:[(0,C.jsx)(h,{dangerouslySetInnerHTML:E(i)}),r?(0,C.jsx)(m,{dangerouslySetInnerHTML:E(r)}):null,"right"===_?(0,C.jsx)(z,{children:"object"===typeof F&&F.map(((e,t)=>(0,C.jsx)(l.$,{color:e.color,onClick:()=>(e=>{document.getElementById(e).scrollIntoView({behavior:"smooth"})})("about"),children:O(e.title)},t)))}):null]})})]})})})}))}}]);
+//# sourceMappingURL=566.26366ee0.chunk.js.map

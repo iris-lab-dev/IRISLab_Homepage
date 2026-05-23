@@ -57,7 +57,7 @@ const Footer = () => {
         key={`${src}-${label}`}
         aria-label={label}
       >
-        <SocialIcon src={`/img/svg/${src}`} alt={src} />
+        <SocialIcon src={`${process.env.PUBLIC_URL}/img/svg/${src}`} alt={src} />
         <SocialLabel>{label}</SocialLabel>
       </SocialItem>
     );
@@ -113,7 +113,7 @@ const Footer = () => {
             <NavLink to="/">
               <LogoContainer>
                 <img
-                  src="/img/png/logo.png"
+                  src={`${process.env.PUBLIC_URL}/img/png/logo.png`}
                   alt="logo.png"
                   width="101px"
                   style={{ height: "auto", display: "block" }}
@@ -138,3 +138,4 @@ const Footer = () => {
 };
 
 export default withTranslation()(Footer);
+

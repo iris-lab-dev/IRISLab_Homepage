@@ -56,7 +56,7 @@ const Header = ({ t }: { t: TFunction }) => {
         <Row justify="space-between">
           <LogoContainer to="/" aria-label="homepage" onClick={() => scrollTo("about")}>
             <img
-              src="/img/png/logo.png"
+              src={`${process.env.PUBLIC_URL}/img/png/logo.png`}
               alt="logo.png"
               width="101px"
               style={{ height: "auto", display: "block" }}
@@ -88,3 +88,4 @@ const Header = ({ t }: { t: TFunction }) => {
 };
 
 export default withTranslation()(Header);
+

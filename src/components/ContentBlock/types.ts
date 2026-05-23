@@ -12,6 +12,7 @@ export interface ContentBlockProps {
     year: string;
     items: {
       month: string;
+      day?: string;
       content: string;
     }[];
   }[];

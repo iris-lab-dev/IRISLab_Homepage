@@ -6,7 +6,7 @@ export const SvgIcon = ({ src, width, height }: SvgIconProps) => {
 
   return (
     <img
-      src={`/img/${folder}/${src}`}
+      src={`${process.env.PUBLIC_URL}/img/${folder}/${src}`}
       alt={src}
       width={width}
       height={height}
@@ -20,3 +20,5 @@ export const SvgIcon = ({ src, width, height }: SvgIconProps) => {
     />
   );
 };
+
+

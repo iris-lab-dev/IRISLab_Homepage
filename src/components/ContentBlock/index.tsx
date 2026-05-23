@@ -10,6 +10,7 @@ import {
   Content,
   Title,
   ContentWrapper,
+  HistoryContentWrapper,
   ServiceSectionOuter,
   ServiceContentWrapper,
   ServiceWrapper,
@@ -24,8 +25,11 @@ import {
   HistoryGroup,
   HistoryYear,
   HistoryItems,
+  HistoryMonthGroup,
+  HistoryMonthLabel,
+  HistoryMonthEntries,
   HistoryItem,
-  HistoryMonth,
+  HistoryDay,
   HistoryText,
 } from "./styles";
 
@@ -52,6 +56,40 @@ const ContentBlock = ({
   const hasSection = typeof section === "object" && section.length > 0;
   const hasHistory = typeof history === "object" && history.length > 0;
   const hasIcon = Boolean(icon);
+
+  const groupHistoryItemsByMonth = (
+    items: {
+      month: string;
+      day?: string;
+      content: string;
+    }[]
+  ) => {
+    return items.reduce(
+      (acc, item) => {
+        const monthGroup = acc.find((group) => group.month === item.month);
+
+        if (monthGroup) {
+          monthGroup.items.push(item);
+          return acc;
+        }
+
+        acc.push({
+          month: item.month,
+          items: [item],
+        });
+
+        return acc;
+      },
+      [] as {
+        month: string;
+        items: {
+          month: string;
+          day?: string;
+          content: string;
+        }[];
+      }[]
+    );
+  };
 
   return (
     <ContentSection>
@@ -97,20 +135,31 @@ const ContentBlock = ({
         ) : hasHistory ? (
           <StyledRow justify="space-between" align="middle" id={id} direction={direction}>
             <Col span={24}>
-              <ContentWrapper>
+              <HistoryContentWrapper>
                 <Title dangerouslySetInnerHTML={renderInlineMarkup(title)} />
                 <HistoryWrapper>
                   {history.map((group, groupIndex) => {
+                    const monthGroups = groupHistoryItemsByMonth(group.items);
+
                     return (
                       <HistoryGroup key={groupIndex}>
                         <HistoryYear>{t(group.year)}</HistoryYear>
                         <HistoryItems>
-                          {group.items.map((item, itemIndex) => {
+                          {monthGroups.map((monthGroup, monthGroupIndex) => {
                             return (
-                              <HistoryItem key={itemIndex}>
-                                <HistoryMonth dangerouslySetInnerHTML={renderInlineMarkup(item.month)} />
-                                <HistoryText dangerouslySetInnerHTML={renderInlineMarkup(item.content)} />
-                              </HistoryItem>
+                              <HistoryMonthGroup key={monthGroupIndex}>
+                                <HistoryMonthLabel dangerouslySetInnerHTML={renderInlineMarkup(monthGroup.month)} />
+                                <HistoryMonthEntries>
+                                  {monthGroup.items.map((item, itemIndex) => {
+                                    return (
+                                      <HistoryItem key={itemIndex}>
+                                        {item.day ? <HistoryDay dangerouslySetInnerHTML={renderInlineMarkup(item.day)} /> : null}
+                                        <HistoryText dangerouslySetInnerHTML={renderInlineMarkup(item.content)} />
+                                      </HistoryItem>
+                                    );
+                                  })}
+                                </HistoryMonthEntries>
+                              </HistoryMonthGroup>
                             );
                           })}
                         </HistoryItems>
@@ -118,7 +167,7 @@ const ContentBlock = ({
                     );
                   })}
                 </HistoryWrapper>
-              </ContentWrapper>
+              </HistoryContentWrapper>
             </Col>
           </StyledRow>
         ) : (

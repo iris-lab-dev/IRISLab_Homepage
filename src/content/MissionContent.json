@@ -4,13 +4,41 @@
     {
       "year": "2026",
       "items": [
+
+                    {
+            "month": "05",
+            "day" : "22",
+            "content": "프로젝트 YN 개발 시작"
+          },
           {
             "month": "05",
+            "day" : "13",
+            "content": "@50days_left 인스타그램 팔로워 1000명 달성"
+          },
+          {
+            "month": "05",
+            "day" : "07",
             "content": "주식회사 아이리스랩 설립"
           },
           {
+            "month": "05",
+            "day" : "05",
+            "content": "상표 출원 (아이리스랩 / IRIS LAB, 출원번호 40-2026-0089304)"
+          },
+                    {
+            "month": "05",
+            "day" : "03",
+            "content": "SNS 채널 개설(@50days_left, @tumtum.kr)"
+          },
+          {
             "month": "04",
-            "content": "프로젝트 IR 개발 시작"
+            "day" : "22",
+            "content": "상표 출원 (틈틈, 출원번호 40-2026-0080197)"
+          },
+          {
+            "month": "04",
+            "day" : "16",
+            "content": "프로젝트 IR (틈틈) 개발 시작"
           }
       ]
     }
