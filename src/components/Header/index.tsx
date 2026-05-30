@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Row, Col, Drawer } from "antd";
+import { useHistory, useLocation } from "react-router-dom";
 import { withTranslation, TFunction } from "react-i18next";
 import Container from "../../common/Container";
 import {
@@ -16,6 +17,8 @@ import {
 
 const Header = ({ t }: { t: TFunction }) => {
   const [visible, setVisibility] = useState(false);
+  const history = useHistory();
+  const location = useLocation();
 
   const toggleButton = () => {
     setVisibility(!visible);
@@ -31,20 +34,39 @@ const Header = ({ t }: { t: TFunction }) => {
     element.scrollIntoView({
       behavior: "smooth",
     });
+  };
+
+  const handleNavigate = (path: string, targetId?: string) => {
     setVisibility(false);
+
+    const goToTarget = () => {
+      if (targetId) {
+        scrollTo(targetId);
+      } else {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    };
+
+    if (location.pathname !== path) {
+      history.push(path);
+      setTimeout(goToTarget, 150);
+      return;
+    }
+
+    goToTarget();
   };
 
   const MenuItem = () => {
     return (
       <>
-        <CustomNavLinkSmall onClick={() => scrollTo("about")}>
+        <CustomNavLinkSmall onClick={() => handleNavigate("/", "about")} aria-label={t("About")}>
           <Span>{t("About")}</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("service")}>
-          <Span>{t("Service")}</Span>
+        <CustomNavLinkSmall onClick={() => handleNavigate("/recruit")} aria-label={t("Recruit")}>
+          <Span>{t("Recruit")}</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("history")}>
-          <Span>{t("History")}</Span>
+        <CustomNavLinkSmall onClick={() => handleNavigate("/notice")} aria-label={t("Notice")}>
+          <Span>{t("Notice")}</Span>
         </CustomNavLinkSmall>
       </>
     );
@@ -54,7 +76,14 @@ const Header = ({ t }: { t: TFunction }) => {
     <HeaderSection>
       <Container>
         <Row justify="space-between">
-          <LogoContainer to="/" aria-label="homepage" onClick={() => scrollTo("about")}>
+          <LogoContainer
+            to="/"
+            aria-label="homepage"
+            onClick={(event) => {
+              event.preventDefault();
+              handleNavigate("/", "about");
+            }}
+          >
             <img
               src={`${process.env.PUBLIC_URL}/img/png/logo.png`}
               alt="logo.png"

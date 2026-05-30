@@ -1,6 +1,5 @@
 import { lazy } from "react";
 import MiddleBlockContent from "../../content/MiddleBlockContent.json";
-import ServiceIntroContent from "../../content/ServiceIntroContent.json";
 import AboutContent from "../../content/AboutContent.json";
 import MissionContent from "../../content/MissionContent.json";
 
@@ -17,9 +16,7 @@ const Home = () => {
         id="about"
         title={MiddleBlockContent.title}
         content={MiddleBlockContent.text}
-
       />
-
       <MiddleBlock
         title={AboutContent.title}
         content={AboutContent.text}

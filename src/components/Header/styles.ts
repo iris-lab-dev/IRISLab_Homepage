@@ -67,11 +67,14 @@ export const Menu = styled("h5")`
   text-align: center;
 `;
 
-export const CustomNavLinkSmall = styled(NavLink)`
+export const CustomNavLinkSmall = styled("button")`
   font-size: 1.2rem;
   color: #000;
   transition: color 0.2s ease-in;
   margin: 0.5rem 2rem;
+  background: none;
+  border: none;
+  padding: 0;
 
   @media only screen and (max-width: 768px) {
     margin: 1.25rem 2rem;

@@ -1,0 +1,21 @@
+{
+  "title": "Recruit",
+  "content": "아이리스랩의 문제 해결 여정에 함께할 동료를 찾습니다. 자율적으로 목표를 설정하고, 스스로 일을 설계하며, 더 나은 사용자 경험을 만들어갈 팀을 기다립니다.\n채용 관련 문의: contact@irislab.co.kr",
+  "section": [
+    {
+      "title": "Product Planning",
+      "content": "사용자 문제를 정의하고, 데이터와 리서치로 가설을 검증하며 제품 방향을 설계합니다.",
+      "icon": "product-launch.svg"
+    },
+    {
+      "title": "Frontend Engineer",
+      "content": "React 기반 웹 경험을 구현하고 성능을 개선하며, 안정적인 배포 파이프라인을 함께 만듭니다.",
+      "icon": "developer.svg"
+    },
+    {
+      "title": "Brand & Community",
+      "content": "콘텐츠와 커뮤니티 운영을 통해 브랜드 경험을 확장하고, 사용자와의 접점을 촘촘히 만듭니다.",
+      "icon": "notes.svg"
+    }
+  ]
+}
