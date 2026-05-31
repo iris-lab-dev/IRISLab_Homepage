@@ -101,7 +101,7 @@ const recruitBoard: BoardItem[] = [
     applyLink: "https://forms.gle/i1fauNj2pxVjPZK28",
     content: `
 
-- (주)아이리스랩에서 운영하는 C2C 생활 플랫폼 '틈틈'의 고객지원을 위한 CS Manager를 채용합니다.
+- (주)아이리스랩의 고객지원을 위한 Customer Service(CS) Manager를 채용합니다.
 
 ### 근무 조건
 - 시급 12,300원
