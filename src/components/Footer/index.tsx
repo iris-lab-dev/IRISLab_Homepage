@@ -32,19 +32,9 @@ const Footer = () => {
       label: "iris-lab-dev",
     },
     {
-      href: "https://www.instagram.com/tumtum.kr",
-      src: "instagram.svg",
-      label: "tumtum.kr",
-    },
-    {
-      href: "https://www.instagram.com/50days_left",
-      src: "instagram.svg",
-      label: "50days_left",
-    },
-    {
-      href: "https://www.youtube.com/@50days_left",
+      href: "https://www.youtube.com/@kririslab",
       src: "youtube.svg",
-      label: "50days_left",
+      label: "아이리스랩",
     },
   ];
 
