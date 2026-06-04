@@ -44,8 +44,8 @@ const recruitBoard: BoardItem[] = [
     id: "KR-NEWB-2026-002",
     category: "장기",
     title: "Customer Service Manager (Youth)",
-    date: "~2026-06-19",
-    applyLink: "https://forms.gle/i1fauNj2pxVjPZK28",
+    date: "모집예정",
+    // applyLink: "https://forms.gle/i1fauNj2pxVjPZK28",
     content: `
 
 - (주)아이리스랩의 고객지원을 위한 Customer Service(CS) Manager를 채용합니다.
@@ -79,9 +79,9 @@ const recruitBoard: BoardItem[] = [
 (* 해당 조건의 경우 최종 합격자 발표 전 확인 절차를 거칠 예정이기 때문에, 지원 전 미리 확인하지 않으셔도 무방합니다)
 
 ### 채용 절차
-- 서류 접수 (~ 6/19)
-- 면접 (~ 6/21)
-- 최종 합격자 발표 (~ 6/22)
+- 서류 접수 
+- 면접 
+- 최종 합격자 발표
 
 ### 참고사항
 - 본 공고는 (주)아이리스랩의 업무대행을 위한 프리랜서 채용이 아닌, 근로기준법상 근로자 채용 공고입니다. 따라서 하기 사항에 동의하지 않는 경우, 채용 절차 진행이 불가능합니다.
@@ -97,8 +97,8 @@ const recruitBoard: BoardItem[] = [
     id: "KR-NEWB-2026-001",
     category: "장기/단기",
     title: "Customer Service Manager",
-    date: "~2026-06-19",
-    applyLink: "https://forms.gle/i1fauNj2pxVjPZK28",
+    date: "모집예정",
+    // applyLink: "https://forms.gle/i1fauNj2pxVjPZK28",
     content: `
 
 - (주)아이리스랩의 고객지원을 위한 Customer Service(CS) Manager를 채용합니다.
@@ -128,9 +128,9 @@ const recruitBoard: BoardItem[] = [
 - 학력 / 경력 무관
 
 ### 채용 절차
-- 서류 접수 (~ 6/19)
-- 면접 (~ 6/21)
-- 최종 합격자 발표 (~ 6/22)
+- 서류 접수
+- 면접 
+- 최종 합격자 발표
 
 ### 참고사항
 - ★ 만 34세 이하일 경우 Customer Service Manager(Youth)로 지원하는 것을 권장드립니다
