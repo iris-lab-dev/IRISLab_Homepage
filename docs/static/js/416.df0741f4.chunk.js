@@ -1,4 +1,4 @@
-"use strict";(self.webpackChunkmy_app=self.webpackChunkmy_app||[]).push([[416],{2646:(e,t,n)=>{n.d(t,{A:()=>r});var i=n(579);const r=e=>{var t;let{src:n,width:r,height:o}=e;const a="png"===(null===(t=n.split(".").pop())||void 0===t?void 0:t.toLowerCase())?"png":"svg";return(0,i.jsx)("img",{src:`./img/${a}/${n}`,alt:n,width:r,height:o,style:{width:r,height:"auto",display:"block",objectFit:"contain",maxWidth:"100%"}})}},5639:(e,t,n)=>{n.d(t,{$:()=>o});const i=(0,n(9).Ay)("button")`
+"use strict";(self.webpackChunkirislab=self.webpackChunkirislab||[]).push([[416],{2646:(e,t,n)=>{n.d(t,{A:()=>r});var i=n(579);const r=e=>{var t;let{src:n,width:r,height:o}=e;const a="png"===(null===(t=n.split(".").pop())||void 0===t?void 0:t.toLowerCase())?"png":"svg";return(0,i.jsx)("img",{src:`./img/${a}/${n}`,alt:n,width:r,height:o,style:{width:r,height:"auto",display:"block",objectFit:"contain",maxWidth:"100%"}})}},5639:(e,t,n)=>{n.d(t,{$:()=>o});const i=(0,n(9).Ay)("button")`
   background: ${e=>e.color||"#000"};
   color: ${e=>e.color?"#000":"#fff"};
   font-size: 1rem;
@@ -20,7 +20,7 @@
     border: 1px solid #000;
     background-color: #000;
   }
-`;var r=n(579);const o=e=>{let{color:t,children:n,onClick:o}=e;return(0,r.jsx)(i,{color:t,onClick:o,children:n})}},9416:(e,t,n)=>{n.r(t),n.d(t,{default:()=>v});var i=n(1645),r=n(7419),o=n(9281),a=n(3614),c=n(5639),l=n(2646),s=n(9);const d=(0,s.Ay)("section")`
+`;var r=n(579);const o=e=>{let{color:t,children:n,onClick:o}=e;return(0,r.jsx)(i,{color:t,onClick:o,children:n})}},9416:(e,t,n)=>{n.r(t),n.d(t,{default:()=>b});var i=n(1645),r=n(7419),o=n(9281),a=n(3614),l=n(5639),c=n(2646),s=n(9);const d=(0,s.Ay)("section")`
   position: relative;
   min-height: calc(100vh - var(--header-height));
   padding: 7.5rem 0 3rem;
@@ -175,5 +175,5 @@
     color: #D4A017;
     font-weight: 700;
   }
-`;var A=n(579);const v=(0,o.C)()((e=>{let{title:t,content:n,button:o,icon:s,section:v,id:b,t:$}=e;const k=e=>({__html:$(e)}),C="object"===typeof v&&v.length>0,I="service"===b;return(0,A.jsx)(d,{id:b,children:(0,A.jsx)(a.q7,{direction:"up",triggerOnce:!0,children:C?(0,A.jsx)(g,{children:(0,A.jsxs)(p,{children:[(0,A.jsx)(h,{dangerouslySetInnerHTML:k(t)}),(0,A.jsx)(x,{dangerouslySetInnerHTML:k(n)}),(0,A.jsx)(w,{children:(0,A.jsx)(u,{gutter:[24,24],children:v.map(((e,t)=>(0,A.jsx)(i.A,{lg:7,md:8,sm:12,xs:24,children:(0,A.jsxs)(f,{onClick:()=>{var t;(t=e.link)&&(/^https?:\/\//i.test(t)?window.open(t,"_blank","noopener,noreferrer"):window.location.href=t)},children:[(0,A.jsx)(y,{$tight:I,children:(0,A.jsx)(l.A,{src:e.icon||s||"",width:"108px",height:"108px"})}),(0,A.jsx)(j,{$wide:I,dangerouslySetInnerHTML:k(e.content)})]})},t)))})})]})}):(0,A.jsx)(r.A,{justify:"center",align:"middle",children:(0,A.jsx)(m,{children:(0,A.jsxs)(i.A,{lg:24,md:24,sm:24,xs:24,children:[(0,A.jsx)(h,{dangerouslySetInnerHTML:k(t)}),(0,A.jsx)(x,{dangerouslySetInnerHTML:k(n)}),o&&(0,A.jsx)(c.$,{name:"submit",onClick:()=>(e=>{document.getElementById(e).scrollIntoView({behavior:"smooth"})})("mission"),children:$(o)})]})})})})})}))}}]);
-//# sourceMappingURL=416.979db622.chunk.js.map
+`;var A=n(579);const b=(0,o.C)()((e=>{let{title:t,content:n,button:o,icon:s,section:b,id:v,t:$}=e;const k=e=>({__html:$(e)}),C="object"===typeof b&&b.length>0,I="service"===v;return(0,A.jsx)(d,{id:v,children:(0,A.jsx)(a.q7,{direction:"up",triggerOnce:!0,children:C?(0,A.jsx)(g,{children:(0,A.jsxs)(p,{children:[(0,A.jsx)(h,{dangerouslySetInnerHTML:k(t)}),(0,A.jsx)(x,{dangerouslySetInnerHTML:k(n)}),(0,A.jsx)(w,{children:(0,A.jsx)(u,{gutter:[24,24],children:b.map(((e,t)=>(0,A.jsx)(i.A,{lg:7,md:8,sm:12,xs:24,children:(0,A.jsxs)(f,{onClick:()=>{var t;(t=e.link)&&(/^https?:\/\//i.test(t)?window.open(t,"_blank","noopener,noreferrer"):window.location.href=t)},children:[(0,A.jsx)(y,{$tight:I,children:(0,A.jsx)(c.A,{src:e.icon||s||"",width:"108px",height:"108px"})}),(0,A.jsx)(j,{$wide:I,dangerouslySetInnerHTML:k(e.content)})]})},t)))})})]})}):(0,A.jsx)(r.A,{justify:"center",align:"middle",children:(0,A.jsx)(m,{children:(0,A.jsxs)(i.A,{lg:24,md:24,sm:24,xs:24,children:[(0,A.jsx)(h,{dangerouslySetInnerHTML:k(t)}),(0,A.jsx)(x,{dangerouslySetInnerHTML:k(n)}),o&&(0,A.jsx)(l.$,{name:"submit",onClick:()=>(e=>{document.getElementById(e).scrollIntoView({behavior:"smooth"})})("mission"),children:$(o)})]})})})})})}))}}]);
+//# sourceMappingURL=416.df0741f4.chunk.js.map

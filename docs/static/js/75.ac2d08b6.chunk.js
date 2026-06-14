@@ -1,0 +1,13 @@
+"use strict";(self.webpackChunkirislab=self.webpackChunkirislab||[]).push([[75],{3075:(e,t,n)=>{n.r(t),n.d(t,{default:()=>j});var r=n(5043),s=n(1688),d=n(3239),i=n(180),a=n(4212),l=n(9),o=n(96),c=n(7252),x=n(579);o.xI.setOptions({breaks:!0});const h=(0,r.lazy)((()=>Promise.resolve().then(n.bind(n,1766)))),p=(0,r.lazy)((()=>n.e(538).then(n.bind(n,8538)))),{Title:g,Paragraph:y,Text:u}=d.A,m=l.Ay.div`
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 0;
+`,b=(0,l.Ay)(i.A)`
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  .ant-card-body {
+    padding: 2rem;
+  }
+`,j=()=>{const{id:e}=(0,s.g)(),t=c.A.find((t=>t.id===e)),n=(0,r.useMemo)((()=>{if(!t)return{__html:""};return{__html:o.xI.parse(t.content)}}),[t]);return t?(0,x.jsxs)(h,{children:[(0,x.jsx)(p,{}),(0,x.jsx)(m,{children:(0,x.jsxs)(b,{children:[(0,x.jsx)(a.A,{color:"gold",children:t.category}),(0,x.jsx)(g,{level:2,style:{marginTop:"1rem"},children:t.title}),(0,x.jsx)(u,{type:"secondary",children:t.date}),(0,x.jsx)(y,{style:{marginTop:"1.5rem"},children:(0,x.jsx)("span",{dangerouslySetInnerHTML:n})})]})})]}):(0,x.jsx)(s.rd,{to:"/notice"})}},7252:(e,t,n)=>{n.d(t,{A:()=>r});const r=[{id:"3",category:"PATENT",title:"\ud2b9\ud5c8 \uad00\ub828 \uc548\ub0b4\uc0ac\ud56d",date:"2026-05-31",content:"- (\uc8fc)\uc544\uc774\ub9ac\uc2a4\ub7a9\uc740 2026\ub144 5\uc6d4 18\uc77c, \uc11c\ube44\uc2a4 '\ud2c8\ud2c8'\uc758 BM(Business Model) \ubc0f \ubc31\uc5d4\ub4dc/DB \ub85c\uc9c1\uc5d0 \ub300\ud55c \ud2b9\ud5c8\ub97c \uc784\uc2dc \ucd9c\uc6d0\ud588\uc2b5\ub2c8\ub2e4.\n- \ucd9c\uc6d0\ubc88\ud638 10-2026-0089989"},{id:"2",category:"TM",title:"\uc0c1\ud45c \uad00\ub828 \uc548\ub0b4\uc0ac\ud56d",date:"2026-05-31",content:"- (\uc8fc)\uc544\uc774\ub9ac\uc2a4\ub7a9\uc740 2026\ub144 4\uc6d4 22\uc77c \uc0c1\ud45c '\ud2c8\ud2c8' / 2026\ub144 5\uc6d4 5\uc77c \uc0c1\ud45c 'IRIS LAB(\uc544\uc774\ub9ac\uc2a4\ub7a9)'\uc744 \ucd9c\uc6d0\ud588\uc73c\uba70, \ud574\ub2f9 \uad8c\ub9ac\ub294 \ub300\ud45c\uc774\uc0ac\uc5d0\uac8c \uc788\uc2b5\ub2c8\ub2e4.\n- 2026\ub144 5\uc6d4 29\uc77c \uae30\uc900 \ud574\ub2f9 \uc0c1\ud45c\uc758 \uad8c\ub9ac\ub97c \ub300\ud45c\uc774\uc0ac \uac1c\uc778\uc5d0\uc11c (\uc8fc)\uc544\uc774\ub9ac\uc2a4\ub7a9\uc73c\ub85c \uc774\uc804\ud558\ub294 \uc791\uc5c5\uc744 \uc9c4\ud589\ud558\uace0 \uc788\uc2b5\ub2c8\ub2e4.\n- \ucd9c\uc6d0\ubc88\ud638 40-2026-0080197(\ud2c8\ud2c8), 40-2026-0089304(IRIS LAB)"},{id:"1",category:"NOTICE",title:"\uc6f9\uc0ac\uc774\ud2b8 \uac1c\ud3b8 \ubc0f \ucc44\uc6a9 \uac8c\uc2dc\ud310 \uc624\ud508",date:"2026-05-30",content:"- \uacf5\uc9c0\uc0ac\ud56d \ubc0f \ucc44\uc6a9 \uac8c\uc2dc\ud310\uc774 \ucd94\uac00\ub418\uc5c8\uc2b5\ub2c8\ub2e4."}]}}]);
+//# sourceMappingURL=75.ac2d08b6.chunk.js.map
