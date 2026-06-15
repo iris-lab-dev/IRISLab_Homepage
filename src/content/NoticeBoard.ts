@@ -1,6 +1,14 @@
 import { BoardItem } from "../components/Board/types";
 
 const noticeBoard: BoardItem[] = [
+//     {
+//     id: "3",
+//     category: "PATENT",
+//     title: "특허 관련 안내사항",
+//     date: "2026-05-31",
+//     content: `- (주)아이리스랩은 2026년 5월 18일, 서비스 '틈틈'의 BM(Business Model) 및 백엔드/DB 로직에 대한 특허를 임시 출원했습니다.
+// - 출원번호 10-2026-0089989`,
+//   },
   {
     id: "3",
     category: "PATENT",
