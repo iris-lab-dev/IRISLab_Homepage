@@ -63,7 +63,7 @@ const Footer = () => {
               <Title>경쟁을 넘어 선순환을 설계합니다.</Title>
               <Empty /> */}
               <Para>
-                대표 : 이종우 | 사업자등록번호 : 723-88-03656
+                대표 : 이종우 | 사업자등록번호 : <a href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=7238803656">723-88-03656</a>
               </Para>
               <Para>
                 주소 : 경상남도 양산시 하북면 지곡1길 8 1동 406호
@@ -72,12 +72,13 @@ const Footer = () => {
                 이메일 : contact@irislab.co.kr | 연락처 : 070-8970-6780
               <br/>
               </Para>
+               <Para>
+                통신판매업 신고번호: 2026-경남양산-0378 | 직업정보제공사업 신고번호: 
+              </Para>
               <CopyrightPara>
                 © 2026 IRIS Lab Co., Ltd.
               </CopyrightPara>
-              {/* <Para>
-                통신판매업신고번호: 1900-서울강남-9999호 | 직업정보제공사업 신고번호: 서울청 제9999-9999호
-              </Para> */}
+
             </Col>
             {/* <Col lg={6} md={7} sm={24} xs={24}>
               <Title>Policy</Title>

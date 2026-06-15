@@ -24,6 +24,11 @@ const routes = [
     exact: true,
     component: "Notice/Detail",
   },
+  {
+    path: "/sns",
+    exact: true,
+    component: "Sns",
+  },
 ];
 
 export default routes;

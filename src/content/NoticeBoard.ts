@@ -11,7 +11,7 @@ const noticeBoard: BoardItem[] = [
   },
     {
     id: "2",
-    category: "TM",
+    category: "PATENT",
     title: "상표 관련 안내사항",
     date: "2026-05-31",
     content: `- (주)아이리스랩은 2026년 4월 22일 상표 '틈틈' / 2026년 5월 5일 상표 'IRIS LAB(아이리스랩)'을 출원했으며, 해당 권리는 대표이사에게 있습니다.
