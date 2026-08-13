@@ -8,11 +8,17 @@ export interface ContentBlockProps {
     content: string;
     icon: string;
   }[];
+  milestones?: {
+    date: string;
+    title: string;
+    description?: string;
+  }[];
   history?: {
     year: string;
     items: {
       month: string;
       day?: string;
+      category?: string;
       content: string;
     }[];
   }[];

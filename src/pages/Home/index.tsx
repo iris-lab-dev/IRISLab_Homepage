@@ -19,6 +19,7 @@ const Home = () => {
       <ContentBlock
         direction="right"
         title={MissionContent.title}
+        milestones={MissionContent.milestones}
         history={MissionContent.history}
         icon=""
         id="history"

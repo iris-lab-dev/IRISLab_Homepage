@@ -63,7 +63,7 @@ const Footer = () => {
               <Title>경쟁을 넘어 선순환을 설계합니다.</Title>
               <Empty /> */}
               <Para>
-                대표 : 이종우 | 사업자등록번호 : <a href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=7238803656">723-88-03656</a>
+                대표 : 이종우 | 사업자등록번호 : 723-88-03656 | <a href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=7238803656">사업자정보확인</a>
               </Para>
               <Para>
                 주소 : 경상남도 양산시 하북면 지곡1길 8 1동 406호
@@ -78,8 +78,11 @@ const Footer = () => {
               <Para>
                 직업정보제공사업 신고번호 : 양산 제2026-3호
               </Para>
+                 <Para>
+                인터넷신문사업 등록번호 : 경남,아02750 (아이리스TV | IRIS TV)
+              </Para>
                <Para>
-                호스팅 서비스 제공 : (유)한국오라클
+                호스팅 서비스 제공 : Github, Inc.
               </Para>
               <br/>
  

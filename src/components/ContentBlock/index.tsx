@@ -1,4 +1,5 @@
-import { Row, Col } from "antd";
+import { useState } from "react";
+import { Col } from "antd";
 import { Fade } from "react-awesome-reveal";
 import { withTranslation } from "react-i18next";
 
@@ -17,11 +18,20 @@ import {
   ServiceRow,
   ServiceCard,
   ServiceLogoSlot,
-  MinTitle,
   MinPara,
   StyledRow,
   ButtonWrapper,
   HistoryWrapper,
+  MilestoneSection,
+  HistorySectionTitle,
+  MilestoneList,
+  MilestoneCard,
+  MilestoneDate,
+  MilestoneTitle,
+  MilestoneDescription,
+  AllUpdatesSection,
+  HistoryFilters,
+  HistoryFilterButton,
   HistoryGroup,
   HistoryYear,
   HistoryItems,
@@ -33,17 +43,22 @@ import {
   HistoryText,
 } from "./styles";
 
+const historyFilters = ["All", "Core", "Service", "Patent", "SNS"] as const;
+type HistoryFilter = (typeof historyFilters)[number];
+
 const ContentBlock = ({
   icon,
   title,
   content,
   section,
+  milestones,
   history,
   button,
   t,
   id,
   direction,
 }: ContentBlockProps) => {
+  const [activeHistoryFilter, setActiveHistoryFilter] = useState<HistoryFilter>("All");
   const renderInlineMarkup = (value: string) => ({ __html: t(value) });
 
   const scrollTo = (id: string) => {
@@ -54,13 +69,16 @@ const ContentBlock = ({
   };
 
   const hasSection = typeof section === "object" && section.length > 0;
+  const hasMilestones = typeof milestones === "object" && milestones.length > 0;
   const hasHistory = typeof history === "object" && history.length > 0;
+  const hasTimeline = hasMilestones || hasHistory;
   const hasIcon = Boolean(icon);
 
   const groupHistoryItemsByMonth = (
     items: {
       month: string;
       day?: string;
+      category?: string;
       content: string;
     }[]
   ) => {
@@ -90,6 +108,13 @@ const ContentBlock = ({
       }[]
     );
   };
+
+  const filteredHistory = (history || [])
+    .map((group) => ({
+      ...group,
+      items: group.items.filter((item) => activeHistoryFilter === "All" || item.category === activeHistoryFilter),
+    }))
+    .filter((group) => group.items.length > 0);
 
   return (
     <ContentSection>
@@ -132,41 +157,72 @@ const ContentBlock = ({
               </ServiceWrapper>
             </ServiceContentWrapper>
           </ServiceSectionOuter>
-        ) : hasHistory ? (
+        ) : hasTimeline ? (
           <StyledRow justify="space-between" align="middle" id={id} direction={direction}>
             <Col span={24}>
               <HistoryContentWrapper>
                 <Title dangerouslySetInnerHTML={renderInlineMarkup(title)} />
-                <HistoryWrapper>
-                  {history.map((group, groupIndex) => {
-                    const monthGroups = groupHistoryItemsByMonth(group.items);
+                {hasMilestones ? (
+                  <MilestoneSection>
+                    <HistorySectionTitle>Key Milestones</HistorySectionTitle>
+                    <MilestoneList>
+                      {milestones.map((milestone, index) => (
+                        <MilestoneCard key={index}>
+                          <MilestoneDate>{t(milestone.date)}</MilestoneDate>
+                          <MilestoneTitle>{t(milestone.title)}</MilestoneTitle>
+                          {milestone.description ? <MilestoneDescription>{t(milestone.description)}</MilestoneDescription> : null}
+                        </MilestoneCard>
+                      ))}
+                    </MilestoneList>
+                  </MilestoneSection>
+                ) : null}
+                {hasHistory ? (
+                  <AllUpdatesSection>
+                    <HistorySectionTitle>All Updates</HistorySectionTitle>
+                    <HistoryFilters>
+                      {historyFilters.map((filter) => (
+                        <HistoryFilterButton
+                          key={filter}
+                          type="button"
+                          $active={activeHistoryFilter === filter}
+                          onClick={() => setActiveHistoryFilter(filter)}
+                        >
+                          {filter}
+                        </HistoryFilterButton>
+                      ))}
+                    </HistoryFilters>
+                    <HistoryWrapper>
+                      {filteredHistory.map((group, groupIndex) => {
+                        const monthGroups = groupHistoryItemsByMonth(group.items);
 
-                    return (
-                      <HistoryGroup key={groupIndex}>
-                        <HistoryYear>{t(group.year)}</HistoryYear>
-                        <HistoryItems>
-                          {monthGroups.map((monthGroup, monthGroupIndex) => {
-                            return (
-                              <HistoryMonthGroup key={monthGroupIndex}>
-                                <HistoryMonthLabel dangerouslySetInnerHTML={renderInlineMarkup(monthGroup.month)} />
-                                <HistoryMonthEntries>
-                                  {monthGroup.items.map((item, itemIndex) => {
-                                    return (
-                                      <HistoryItem key={itemIndex}>
-                                        {item.day ? <HistoryDay dangerouslySetInnerHTML={renderInlineMarkup(item.day)} /> : null}
-                                        <HistoryText dangerouslySetInnerHTML={renderInlineMarkup(item.content)} />
-                                      </HistoryItem>
-                                    );
-                                  })}
-                                </HistoryMonthEntries>
-                              </HistoryMonthGroup>
-                            );
-                          })}
-                        </HistoryItems>
-                      </HistoryGroup>
-                    );
-                  })}
-                </HistoryWrapper>
+                        return (
+                          <HistoryGroup key={groupIndex}>
+                            <HistoryYear>{t(group.year)}</HistoryYear>
+                            <HistoryItems>
+                              {monthGroups.map((monthGroup, monthGroupIndex) => {
+                                return (
+                                  <HistoryMonthGroup key={monthGroupIndex}>
+                                    <HistoryMonthLabel dangerouslySetInnerHTML={renderInlineMarkup(monthGroup.month)} />
+                                    <HistoryMonthEntries>
+                                      {monthGroup.items.map((item, itemIndex) => {
+                                        return (
+                                          <HistoryItem key={itemIndex}>
+                                            {item.day ? <HistoryDay dangerouslySetInnerHTML={renderInlineMarkup(item.day)} /> : null}
+                                            <HistoryText dangerouslySetInnerHTML={renderInlineMarkup(item.content)} />
+                                          </HistoryItem>
+                                        );
+                                      })}
+                                    </HistoryMonthEntries>
+                                  </HistoryMonthGroup>
+                                );
+                              })}
+                            </HistoryItems>
+                          </HistoryGroup>
+                        );
+                      })}
+                    </HistoryWrapper>
+                  </AllUpdatesSection>
+                ) : null}
               </HistoryContentWrapper>
             </Col>
           </StyledRow>

@@ -1,74 +1,154 @@
 {
   "title": "History",
+  "milestones": [
+    {
+      "date": "2026.05.07",
+      "title": "주식회사 아이리스랩 설립",
+      "description": "아이리스랩의 공식 출발"
+    },
+    {
+      "date": "2026.05.27",
+      "title": "틈틈 사전예약 시작",
+      "description": "첫 서비스의 시장 검증 시작"
+    },
+    {
+      "date": "2026.06.07",
+      "title": "틈틈 사전예약 1,000명 달성",
+      "description": "초기 사용자 관심과 가능성 확인"
+    }
+  ],
   "history": [
     {
       "year": "2026",
       "items": [
 
+                {
+          "month": "08",
+          "day": "11",
+          "category": "Patent",
+          "content": "상표 출원 (아이리스TV)"
+        },
+
+                       {
+          "month": "07",
+          "day": "25",
+          "category": "SNS",
+          "content": "'아이리스랩' -> '아이리스TV(iristvkr)' 채널명 변경"
+        },
+
+                {
+          "month": "07",
+          "day": "23",
+          "category": "Core",
+          "content": "인터넷신문사업 등록 (아이리스TV / 경남, 아02750)"
+        },
 
         {
-            "month": "06",
-            "day" : "09",
-            "content": "직업정보제공사업 신고완료 (양산 제2026-3호)"
-          },
-        {
-            "month": "06",
-            "day" : "07",
-            "content": "'틈틈' 사전예약 1,000명 달성"
-          },
-
+          "month": "07",
+          "day": "15",
+          "category": "Patent",
+          "content": "상표 출원 (YNI)"
+        },
 
         {
-            "month": "05",
-            "day" : "27",
-            "content": "[틈틈] 사전예약 시작"
-          },
-          {
-            "month": "05",
-            "day" : "26",
-            "content": "위치기반서비스 사업자 신고완료"
-          },
+          "month": "06",
+          "day": "22",
+          "category": "Service",
+          "content": "'틈틈' 서비스 출시 (사전예약 1,716명)"
+        },
+                {
+          "month": "06",
+          "day": "21",
+          "category": "SNS",
+          "content": "'아이리스랩(kririslab)' 유튜브/치치직 개설 + 버튜버 데뷔"
+        },
+                        {
+          "month": "06",
+          "day": "21",
+          "category": "SNS",
+          "content": "누적 SNS 총 조회수 100만 달성"
+        },
 
-          {
-            "month": "05",
-            "day" : "22",
-            "content": "[프로젝트 YN] 개발 시작"
-          },
-           {
-            "month": "05",
-            "day" : "21",
-            "content": "통신판매업 신고완료 (2026-경남양산-0378)"
-          },
-          {
-            "month": "05",
-            "day" : "13",
-            "content": "@50days_left 인스타그램 팔로워 1000명 달성"
-          },
-          {
-            "month": "05",
-            "day" : "07",
-            "content": "주식회사 아이리스랩 설립"
-          },
-          {
-            "month": "05",
-            "day" : "05",
-            "content": "상표 출원 (아이리스랩 / IRIS LAB, 출원번호 40-2026-0089304)"
-          },
-                    {
-            "month": "05",
-            "day" : "03",
-            "content": "SNS 채널 개설(@50days_left, @tumtum.kr)"
-          },
-          {
-            "month": "04",
-            "day" : "22",
-            "content": "상표 출원 (틈틈, 출원번호 40-2026-0080197)"
-          },
-          {
-            "month": "04",
-            "day" : "16",
-            "content": "[프로젝트 IR (틈틈)] 개발 시작"
-          }
+
+        {
+          "month": "06",
+          "day": "19",
+          "category": "Patent",
+          "content": "특허 출원 (태스크 객체화 및 AI 보상 처리 등)"
+        },
+
+        {
+          "month": "06",
+          "day": "09",
+          "category": "Core",
+          "content": "직업정보제공사업 신고완료 (양산 제2026-3호)"
+        },
+        {
+          "month": "06",
+          "day": "07",
+          "category": "Service",
+          "content": "'틈틈' 사전예약 1,000명 달성"
+        },
+        {
+          "month": "05",
+          "day": "27",
+          "category": "Service",
+          "content": "'틈틈' 사전예약 시작"
+        },
+        {
+          "month": "05",
+          "day": "26",
+          "category": "Core",
+          "content": "위치기반서비스 사업자 신고완료"
+        },
+        {
+          "month": "05",
+          "day": "22",
+          "category": "Service",
+          "content": "'프로젝트 YN (YNI)' 개발 시작"
+        },
+        {
+          "month": "05",
+          "day": "21",
+          "category": "Core",
+          "content": "통신판매업 신고완료 (2026-경남양산-0378)"
+        },
+        {
+          "month": "05",
+          "day": "13",
+          "category": "SNS",
+          "content": "'50일' 인스타그램 팔로워 1000명 달성"
+        },
+        {
+          "month": "05",
+          "day": "07",
+          "category": "Core",
+          "content": "주식회사 아이리스랩 설립"
+        },
+        {
+          "month": "05",
+          "day": "05",
+          "category": "Patent",
+          "content": "상표 출원 (아이리스랩 / IRIS LAB)"
+        },
+        {
+          "month": "05",
+          "day": "03",
+          "category": "SNS",
+          "content": "'50일(50days_left)' SNS 채널 개설"
+        },
+        {
+          "month": "04",
+          "day": "22",
+          "category": "Patent",
+          "content": "상표 출원 (틈틈)"
+        },
+        {
+          "month": "04",
+          "day": "16",
+          "category": "Service",
+          "content": "'프로젝트 IR (틈틈)' 개발 시작"
+        }
       ]
     }
   ]
