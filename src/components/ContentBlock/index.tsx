@@ -22,13 +22,6 @@ import {
   StyledRow,
   ButtonWrapper,
   HistoryWrapper,
-  MilestoneSection,
-  HistorySectionTitle,
-  MilestoneList,
-  MilestoneCard,
-  MilestoneDate,
-  MilestoneTitle,
-  MilestoneDescription,
   AllUpdatesSection,
   HistoryFilters,
   HistoryFilterButton,
@@ -51,7 +44,6 @@ const ContentBlock = ({
   title,
   content,
   section,
-  milestones,
   history,
   button,
   t,
@@ -69,9 +61,8 @@ const ContentBlock = ({
   };
 
   const hasSection = typeof section === "object" && section.length > 0;
-  const hasMilestones = typeof milestones === "object" && milestones.length > 0;
   const hasHistory = typeof history === "object" && history.length > 0;
-  const hasTimeline = hasMilestones || hasHistory;
+  const hasTimeline = hasHistory;
   const hasIcon = Boolean(icon);
 
   const groupHistoryItemsByMonth = (
@@ -162,23 +153,8 @@ const ContentBlock = ({
             <Col span={24}>
               <HistoryContentWrapper>
                 <Title dangerouslySetInnerHTML={renderInlineMarkup(title)} />
-                {hasMilestones ? (
-                  <MilestoneSection>
-                    <HistorySectionTitle>Key Milestones</HistorySectionTitle>
-                    <MilestoneList>
-                      {milestones.map((milestone, index) => (
-                        <MilestoneCard key={index}>
-                          <MilestoneDate>{t(milestone.date)}</MilestoneDate>
-                          <MilestoneTitle>{t(milestone.title)}</MilestoneTitle>
-                          {milestone.description ? <MilestoneDescription>{t(milestone.description)}</MilestoneDescription> : null}
-                        </MilestoneCard>
-                      ))}
-                    </MilestoneList>
-                  </MilestoneSection>
-                ) : null}
                 {hasHistory ? (
                   <AllUpdatesSection>
-                    <HistorySectionTitle>All Updates</HistorySectionTitle>
                     <HistoryFilters>
                       {historyFilters.map((filter) => (
                         <HistoryFilterButton

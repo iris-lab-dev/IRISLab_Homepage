@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const FooterSection = styled("footer")`
   background: rgb(241, 242, 243);
-  padding: 2.5rem 0;
+  padding: 1.25rem 0;
 `;
 
 export const Title = styled("h4")`
@@ -19,7 +19,7 @@ export const Title = styled("h4")`
 export const NavLink = styled(Link)`
   display: block;
   font-size: 1rem;
-  margin-bottom: 0.625rem;
+  margin-bottom: 0.75rem;
   transition: all 0.2s ease-in-out;
 
   &:hover,
@@ -27,15 +27,6 @@ export const NavLink = styled(Link)`
   &:focus {
     color: #000;
   }
-`;
-
-export const Extra = styled("section")`
-  background: rgb(241, 242, 243);
-  position: relative;
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  padding-bottom: 2rem;
 `;
 
 export const LogoContainer = styled("div")`
@@ -46,13 +37,15 @@ export const LogoContainer = styled("div")`
 
 export const Para = styled("div")`
   color: #000;
-  font-size: 14px;
-  width: 70%;
+  font-size: 12px;
+  line-height: 1.55;
+  width: 100%;
 `;
 
 export const CopyrightPara = styled(Para)`
   color: #9ca3af;
   font-family: Arial, Helvetica, sans-serif;
+  margin-top: 0.4rem;
 `;
 
 export const Large = styled(Link)`
@@ -96,9 +89,9 @@ export const Empty = styled("div")`
 export const SocialItem = styled("a")`
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.35rem;
   color: #111827;
-  padding: 0.4rem 0.7rem;
+  padding: 0.3rem 0.55rem;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.55);
   border: 1px solid rgba(17, 24, 39, 0.08);
@@ -114,14 +107,14 @@ export const SocialItem = styled("a")`
 `;
 
 export const SocialIcon = styled("img")`
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   display: block;
   flex-shrink: 0;
 `;
 
 export const SocialLabel = styled("span")`
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
   letter-spacing: -0.01em;
   line-height: 1;
@@ -160,7 +153,8 @@ export const FooterContainer = styled("div")`
   }
 
   @media screen and (max-width: 480px) {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, max-content));
+    gap: 0.5rem;
   }
 
   div {
