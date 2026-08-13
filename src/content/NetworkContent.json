@@ -1,0 +1,21 @@
+{
+  "title": "SNS",
+  "text": "아이리스랩과 각 브랜드의 이야기는 <span class=\"accent-black-strong\">공식 SNS</span>에서 가장 먼저 전합니다.",
+  "section": [
+    {
+      "content": "틈틈 Instagram\n일상에 여유를 더하는 이야기를 나눕니다.",
+      "icon": "instagram.svg",
+      "link": "https://www.instagram.com/tumtum.kr"
+    },
+    {
+      "content": "50 Days Left\n0에서 1을 만드는 50일간의 기록",
+      "icon": "youtube.svg",
+      "link": "https://www.youtube.com/@50days_left"
+    },
+    {
+      "content": "IRISLab\n공식 소식과 새로운 도전을 전합니다.",
+      "icon": "linkedin.svg",
+      "link": "https://irislab.co.kr"
+    }
+  ]
+}

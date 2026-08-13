@@ -5,6 +5,16 @@ const routes = [
     component: "Home",
   },
   {
+    path: "/ecosystem",
+    exact: true,
+    component: "Ecosystem",
+  },
+  {
+    path: "/network",
+    exact: true,
+    component: "Network",
+  },
+  {
     path: "/recruit",
     exact: true,
     component: "Recruit",

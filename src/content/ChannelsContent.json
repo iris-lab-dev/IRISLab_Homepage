@@ -1,0 +1,21 @@
+{
+  "title": "Channels",
+  "text": "브랜드와 프로젝트의 흐름을 가장 가까이에서 만날 수 있는 <span class=\"accent-black-strong\">공식 채널</span>을 운영합니다.",
+  "section": [
+    {
+      "content": "IRISLab YouTube\n새로운 도전과 이야기를 영상으로 전합니다.",
+      "icon": "youtube.svg",
+      "link": "https://youtube.irislab.co.kr"
+    },
+    {
+      "content": "IRISLab Discord\n커뮤니티와 더 가깝게 대화합니다.",
+      "icon": "developer.svg",
+      "link": "https://discord.irislab.co.kr"
+    },
+    {
+      "content": "IRISLab GitHub\n기술과 프로젝트의 기록을 공유합니다.",
+      "icon": "github.svg",
+      "link": "https://github.irislab.co.kr"
+    }
+  ]
+}

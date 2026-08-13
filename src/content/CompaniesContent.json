@@ -1,0 +1,18 @@
+{
+  "title": "Companies",
+  "text": "각 회사는 고유한 전문성과 관점으로 움직이되, <span class=\"accent-black-strong\">더 나은 일상</span>이라는 하나의 방향을 함께 만듭니다.",
+  "section": [
+    {
+      "content": "IRISLab\n기술로 사람과 사회를 연결하는 기업",
+      "icon": "logo.png"
+    },
+    {
+      "content": "Next Company\n새로운 영역을 이끌 회사를 준비하고 있습니다.",
+      "icon": "developer.svg"
+    },
+    {
+      "content": "Future Company\n함께 성장할 다음 회사를 설계합니다.",
+      "icon": "product-launch.svg"
+    }
+  ]
+}

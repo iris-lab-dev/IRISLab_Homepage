@@ -62,6 +62,12 @@ const Header = ({ t }: { t: TFunction }) => {
         <CustomNavLinkSmall onClick={() => handleNavigate("/", "about")} aria-label={t("About")}>
           <Span>{t("About")}</Span>
         </CustomNavLinkSmall>
+        <CustomNavLinkSmall onClick={() => handleNavigate("/ecosystem")} aria-label={t("Ecosystem")}>
+          <Span>{t("Ecosystem")}</Span>
+        </CustomNavLinkSmall>
+        <CustomNavLinkSmall onClick={() => handleNavigate("/network")} aria-label={t("Network")}>
+          <Span>{t("Network")}</Span>
+        </CustomNavLinkSmall>
         <CustomNavLinkSmall onClick={() => handleNavigate("/recruit")} aria-label={t("Recruit")}>
           <Span>{t("Recruit")}</Span>
         </CustomNavLinkSmall>
