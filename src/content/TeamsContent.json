@@ -5,31 +5,31 @@
     {
       "title": "Product",
       "section": [
-        { "title": "IRIS Studio", "subtitle": "아이리스 스튜디오 | 기획", "content": "사용자의 문제를 발견하고 제품의 방향과 경험을 설계합니다.", "icon": "logo.svg" },
-        { "title": "IRIS Atelier", "subtitle": "아이리스 아틀리에 | 디자인", "content": "브랜드와 제품이 만나는 모든 순간을 세심하게 디자인합니다.", "icon": "logo.svg" },
-        { "title": "IRIS Workshop", "subtitle": "아이리스 공방 | 개발", "content": "아이디어를 안정적이고 확장 가능한 서비스로 구현합니다.", "icon": "logo.svg" },
-        { "title": "IRIS Archives", "subtitle": "아이리스 서고 | R&D", "content": "새로운 기술과 인사이트를 탐구해 다음 가능성을 축적합니다.", "icon": "logo.svg" },
+        { "title": "IRIS Studio", "subtitle": "아이리스 스튜디오 | 기획", "content": "사용자의 문제를 발견하고 제품의 방향과 경험을 설계합니다.", "icon": "101_아이리스스튜디오_IRISStudio.png" },
+        { "title": "IRIS Atelier", "subtitle": "아이리스 아틀리에 | 디자인", "content": "브랜드와 제품이 만나는 모든 순간을 세심하게 디자인합니다.", "icon": "102_아이리스아틀리에.png" },
+        { "title": "IRIS Workshop", "subtitle": "아이리스 공방 | 개발", "content": "아이디어를 안정적이고 확장 가능한 서비스로 구현합니다.", "icon": "103_아이리스공방.png" },
+        { "title": "IRIS Archives", "subtitle": "아이리스 서고 | R&D", "content": "새로운 기술과 인사이트를 탐구해 다음 가능성을 축적합니다.", "icon": "104_아이리스서고.png" },
         { "title": "IRIS Hub", "subtitle": "아이리스 허브 | 유통 및 물류", "content": "제품이 고객에게 닿는 흐름을 효율적으로 연결합니다.", "icon": "logo.svg" },
-        { "title": "IRIS CP", "subtitle": "아이리스 CP | QA 및 운영", "content": "일관된 품질과 안정적인 서비스 운영을 책임집니다.", "icon": "logo.svg" }
+        { "title": "IRIS CP", "subtitle": "아이리스 CP | QA 및 운영", "content": "일관된 품질과 안정적인 서비스 운영을 책임집니다.", "icon": "106_아이리스CP.png" }
       ]
     },
     {
       "title": "Growth & Business",
       "section": [
-        { "title": "IRIS TV", "subtitle": "아이리스 TV | 대외협력 및 마케팅", "content": "아이리스랩의 이야기와 가치를 더 넓은 세상에 전합니다.", "icon": "logo.svg" },
-        { "title": "IRIS Link", "subtitle": "아이리스 링크 | B2B 및 영업", "content": "파트너와 고객을 연결해 새로운 비즈니스 기회를 만듭니다.", "icon": "logo.svg" },
-        { "title": "IRIS & Solutions", "subtitle": "아이리스 N솔루션 | 고객지원", "content": "고객의 목소리에 귀 기울여 더 나은 해결을 함께 찾습니다.", "icon": "logo.svg" }
+        { "title": "IRIS TV", "subtitle": "아이리스 TV | 대외협력 및 마케팅", "content": "세상을 보는 새로운 시선, 아이리스TV", "icon": "201_아이리스TV_1280x720.png" },
+        { "title": "IRIS Link", "subtitle": "아이리스 링크 | B2B 및 영업", "content": "파트너와 고객을 연결해 새로운 비즈니스 기회를 만듭니다.", "icon": "202_아이리스링크_IRISLink.png" },
+        { "title": "IRIS & Solutions", "subtitle": "아이리스 N솔루션 | 고객지원", "content": "하나뿐인 당신을 위한 Global Quality Service", "icon": "203_아이리스N솔루션.png" }
       ]
     },
     {
       "title": "Operations & Management",
       "section": [
-        { "title": "IRIS Tower", "subtitle": "아이리스 타워 | 전략지원", "content": "조직의 목표를 연결하고 지속 가능한 성장을 지원합니다.", "icon": "logo.svg" },
-        { "title": "IRIS Guild", "subtitle": "아이리스 길드 | 인사노무", "content": "구성원이 몰입하고 함께 성장할 환경을 만들어 갑니다.", "icon": "logo.svg" },
-        { "title": "IRIS Ledger", "subtitle": "아이리스 상회 | 재무회계", "content": "투명한 재무 운영으로 건강한 사업의 기반을 지킵니다.", "icon": "logo.svg" },
-        { "title": "IRIS Codex", "subtitle": "아이리스 도감 | 지식재산", "content": "아이리스랩의 창의적인 자산과 권리를 체계적으로 보호합니다.", "icon": "logo.svg" },
-        { "title": "IRIS Shield", "subtitle": "아이리스 쉴드 | 정보보안", "content": "정보와 서비스를 안전하게 지키는 보안 체계를 운영합니다.", "icon": "logo.svg" },
-        { "title": "Eoujjul IRIS", "subtitle": "어쩔 아이리스 | 법무", "content": "신뢰할 수 있는 기준과 절차로 사업의 여정을 뒷받침합니다.", "icon": "logo.svg" }
+        { "title": "IRIS Tower", "subtitle": "아이리스 타워 | 전략지원", "content": "조직의 목표를 연결하고 지속 가능한 성장을 지원합니다.", "icon": "301_아이리스타워_IRISTower.png" },
+        { "title": "IRIS Guild", "subtitle": "아이리스 길드 | 인사노무", "content": "아이리스랩의 구성원이 몰입하고 함께 성장하는 환경을 만들어 갑니다.", "icon": "302_아이리스길드_IRISGuild.png" },
+        { "title": "IRIS Ledger", "subtitle": "아이리스 상회 | 재무회계", "content": "투명한 재무 운영으로 건강한 사업의 기반을 지킵니다.", "icon": "303_아이리스상회.png" },
+        { "title": "IRIS Codex", "subtitle": "아이리스 도감 | 지식재산", "content": "아이리스랩의 창의적인 자산과 권리를 체계적으로 보호합니다.", "icon": "304_아이리스도감.png" },
+        { "title": "IRIS Shield", "subtitle": "아이리스 쉴드 | 정보보안", "content": "정보와 서비스를 안전하게 지키는 보안 체계를 운영합니다.", "icon": "305_아이리스쉴드_IRISShield.png" },
+        { "title": "Eoujjul IRIS", "subtitle": "어쩔 아이리스 | 법무", "content": "어쩔티비? ㄴㄴ '어쩔 아이리스'", "icon": "306_어쩔아이리스_EoujjulIRIS.png" }
       ]
     }
   ]
