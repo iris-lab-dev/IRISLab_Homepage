@@ -6,7 +6,7 @@ export const SvgIcon = ({ src, width, height }: SvgIconProps) => {
 
   return (
     <img
-      src={`${process.env.PUBLIC_URL}/img/${folder}/${src}`}
+      src={`${process.env.PUBLIC_URL}/img/${folder}/${src.normalize("NFC")}`}
       alt={src}
       width={width}
       height={height}
