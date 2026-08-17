@@ -3,16 +3,22 @@
   "text": "아이리스랩은 기술을 통해 <span class=\"accent-black-strong\">일상의 불편</span>을 줄이고, 더 나은 선택과 여유를 만드는 제품을 설계합니다.",
   "section": [
     {
-      "content": "틈틈\n내 삶에 여유를 더하는 디지털 해결사",
+      "title": "틈틈",
+      "subtitle": "Digital solution",
+      "content": "내 삶에 여유를 더하는 디지털 해결사",
       "icon": "logo_tumtum.png",
       "link": "https://teaser.tumtum.kr"
     },
     {
-      "content": "Next Product\n새로운 제품을 준비하고 있습니다.",
+      "title": "Next Product",
+      "subtitle": "Coming soon",
+      "content": "새로운 제품을 준비하고 있습니다.",
       "icon": "product-launch.svg"
     },
     {
-      "content": "Future Product\n더 나은 일상을 위한 제품을 설계합니다.",
+      "title": "Future Product",
+      "subtitle": "In development",
+      "content": "더 나은 일상을 위한 제품을 설계합니다.",
       "icon": "graphs.svg"
     }
   ]

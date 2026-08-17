@@ -118,7 +118,7 @@ export const ServiceWrapper = styled("div")`
   width: 100%;
 `;
 
-export const ServiceRow = styled(Row)`
+export const ServiceRow = styled(Row)<{ $stacked?: boolean }>`
   width: 100%;
   max-width: 1080px;
   margin: 0 auto;
@@ -130,9 +130,15 @@ export const ServiceRow = styled(Row)`
     display: flex;
     justify-content: center;
   }
+
+  ${({ $stacked }) =>
+    $stacked &&
+    `
+      row-gap: 0.75rem;
+    `}
 `;
 
-export const ServiceCard = styled("div")`
+export const ServiceCard = styled("div")<{ $stacked?: boolean }>`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -143,6 +149,49 @@ export const ServiceCard = styled("div")`
   max-width: 240px;
   margin: 0 auto;
   cursor: pointer;
+
+  ${({ $stacked }) =>
+    $stacked &&
+    `
+      display: grid;
+      grid-template-columns: 120px minmax(0, 1fr);
+      gap: 1rem;
+      max-width: none;
+      min-height: 148px;
+      padding: 1rem 1.25rem;
+      border: 1px solid #d9d9d9;
+      border-radius: 4px;
+      text-align: left;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+      &:hover {
+        border-color: #d4a017;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      }
+
+      > div:first-child {
+        width: 120px;
+        height: 96px;
+        margin: 0;
+      }
+
+      @media only screen and (max-width: 575px) {
+        grid-template-columns: 88px minmax(0, 1fr);
+        gap: 0.75rem;
+        min-height: 0;
+        padding: 0.875rem;
+
+        > div:first-child {
+          width: 88px;
+          height: 76px;
+        }
+
+        > div:first-child img {
+          max-width: 88px;
+          max-height: 76px;
+        }
+      }
+    `}
 `;
 
 export const ServiceLogoSlot = styled("div")<{ $tight?: boolean }>`
@@ -155,6 +204,71 @@ export const ServiceLogoSlot = styled("div")<{ $tight?: boolean }>`
 
   img {
     margin: 0 auto;
+  }
+`;
+
+export const ServiceCardTitle = styled("h3")`
+  margin: 0;
+  color: #1f1f1f;
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.3;
+`;
+
+export const ServiceCardSubtitle = styled("p")`
+  margin: 0.35rem 0 0;
+  color: #d4a017;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+`;
+
+export const ServiceCardDescription = styled("p")`
+  margin: 0.75rem 0 0;
+  color: #606060;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  white-space: pre-line;
+`;
+
+export const TeamGroup = styled("section")`
+  width: 100%;
+
+  & + & {
+    margin-top: 2.5rem;
+  }
+`;
+
+export const TeamGroupTitle = styled("h2")`
+  margin: 0 0 1rem;
+  color: #404041;
+  font-family: "OneStoreMobileGothicBody", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  text-align: left;
+
+  @media only screen and (max-width: 575px) {
+    font-size: 1.15rem;
+  }
+`;
+
+export const ServiceCardAction = styled("button")`
+  margin-top: 0.75rem;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid #404041;
+  border-radius: 2px;
+  background: transparent;
+  color: #404041;
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+
+  &:hover {
+    border-color: #d4a017;
+    background: #d4a017;
+    color: #ffffff;
   }
 `;
 

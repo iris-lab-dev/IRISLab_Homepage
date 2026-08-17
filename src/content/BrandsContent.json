@@ -3,16 +3,22 @@
   "text": "브랜드마다 서로 다른 문제를 발견하고, 사람들의 삶에 <span class=\"accent-black-strong\">작지만 분명한 변화</span>를 더합니다.",
   "section": [
     {
-      "content": "틈틈\n일상에 여유를 더하는 라이프스타일 브랜드",
+      "title": "틈틈",
+      "subtitle": "Lifestyle brand",
+      "content": "일상에 여유를 더하는 라이프스타일 브랜드",
       "icon": "logo_tumtum.png",
       "link": "https://teaser.tumtum.kr"
     },
     {
-      "content": "Next Brand\n새로운 일상을 위한 브랜드를 준비하고 있습니다.",
+      "title": "Next Brand",
+      "subtitle": "Coming soon",
+      "content": "새로운 일상을 위한 브랜드를 준비하고 있습니다.",
       "icon": "product-launch.svg"
     },
     {
-      "content": "Future Brand\n다음 세대의 경험을 위한 브랜드를 만듭니다.",
+      "title": "Future Brand",
+      "subtitle": "In development",
+      "content": "다음 세대의 경험을 위한 브랜드를 만듭니다.",
       "icon": "notes.svg"
     }
   ]

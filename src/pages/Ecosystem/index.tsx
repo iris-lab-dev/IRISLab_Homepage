@@ -1,7 +1,6 @@
 import { lazy } from "react";
 import ProductsContent from "../../content/AboutContent.json";
-import CompaniesContent from "../../content/CompaniesContent.json";
-import BrandsContent from "../../content/BrandsContent.json";
+import TeamsContent from "../../content/TeamsContent.json";
 
 const Container = lazy(() => import("../../common/Container"));
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
@@ -18,16 +17,10 @@ const Ecosystem = () => {
         section={ProductsContent.section}
       />
       <MiddleBlock
-        id="companies"
-        title={CompaniesContent.title}
-        content={CompaniesContent.text}
-        section={CompaniesContent.section}
-      />
-      <MiddleBlock
-        id="brands"
-        title={BrandsContent.title}
-        content={BrandsContent.text}
-        section={BrandsContent.section}
+        id="teams"
+        title={TeamsContent.title}
+        content={TeamsContent.text}
+        groups={TeamsContent.groups}
       />
     </Container>
   );

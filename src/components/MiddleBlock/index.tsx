@@ -15,24 +15,39 @@ import {
   ServiceCard,
   ServiceLogoSlot,
   MinPara,
+  ServiceCardTitle,
+  ServiceCardSubtitle,
+  ServiceCardDescription,
+  ServiceCardAction,
+  TeamGroup,
+  TeamGroupTitle,
 } from "./styles";
+
+interface SectionItem {
+  title?: string;
+  subtitle?: string;
+  content: string;
+  icon: string;
+  link?: string;
+}
+
+interface TeamGroupItem {
+  title: string;
+  section: SectionItem[];
+}
 
 interface MiddleBlockProps {
   title: string;
   content: string;
   button?: string;
   icon?: string;
-  section?: {
-    title?: string;
-    content: string;
-    icon: string;
-    link?: string;
-  }[];
+  section?: SectionItem[];
+  groups?: TeamGroupItem[];
   id?: string;
   t: TFunction;
 }
 
-const MiddleBlock = ({ title, content, button, icon, section, id, t }: MiddleBlockProps) => {
+const MiddleBlock = ({ title, content, button, icon, section, groups, id, t }: MiddleBlockProps) => {
   const renderInlineMarkup = (value: string) => ({ __html: t(value) });
 
   const scrollTo = (id: string) => {
@@ -56,38 +71,70 @@ const MiddleBlock = ({ title, content, button, icon, section, id, t }: MiddleBlo
   };
 
   const hasSection = typeof section === "object" && section.length > 0;
+  const hasGroups = typeof groups === "object" && groups.length > 0;
   const isServiceSection = id === "service";
+  const isEcosystemSection = ["products", "companies", "brands", "teams"].includes(id || "");
+  const renderCards = (items: SectionItem[]) => (
+    <ServiceRow $stacked={isEcosystemSection} gutter={isEcosystemSection ? [12, 12] : [24, 24]}>
+      {items.map((item, index) => (
+        <Col
+          key={`${item.title}-${index}`}
+          lg={isEcosystemSection ? 12 : 7}
+          md={isEcosystemSection ? 12 : 8}
+          sm={isEcosystemSection ? 24 : 12}
+          xs={24}
+        >
+          <ServiceCard $stacked={isEcosystemSection} onClick={() => navigateTo(item.link)}>
+            <ServiceLogoSlot $tight={isServiceSection}>
+              <SvgIcon src={item.icon || icon || ""} width="120px" height="120px" />
+            </ServiceLogoSlot>
+            {isEcosystemSection ? (
+              <div>
+                <ServiceCardTitle>{t(item.title || "")}</ServiceCardTitle>
+                <ServiceCardSubtitle>{t(item.subtitle || "")}</ServiceCardSubtitle>
+                <ServiceCardDescription dangerouslySetInnerHTML={renderInlineMarkup(item.content)} />
+                {item.link && (
+                  <ServiceCardAction
+                    type="button"
+                    onClick={(event) => {
+                      event.stopPropagation();
+                      navigateTo(item.link);
+                    }}
+                  >
+                    바로가기
+                  </ServiceCardAction>
+                )}
+              </div>
+            ) : (
+              <MinPara $wide={isServiceSection} dangerouslySetInnerHTML={renderInlineMarkup(item.content)} />
+            )}
+          </ServiceCard>
+        </Col>
+      ))}
+    </ServiceRow>
+  );
 
   return (
     <MiddleBlockSection id={id}>
       <Slide direction="up" triggerOnce>
-        {hasSection ? (
+        {hasSection || hasGroups ? (
           <ServiceSectionOuter>
             <ServiceContentWrapper>
               <Title dangerouslySetInnerHTML={renderInlineMarkup(title)} />
               <Content dangerouslySetInnerHTML={renderInlineMarkup(content)} />
               <ServiceWrapper>
-                <ServiceRow gutter={[24, 24]}>
-                  {section.map((item, index) => {
-                    return (
-                      <Col key={index} lg={7} md={8} sm={12} xs={24}>
-                        <ServiceCard onClick={() => navigateTo(item.link)}>
-                          <ServiceLogoSlot $tight={isServiceSection}>
-                            <SvgIcon
-                              src={item.icon || icon || ""}
-                              width="108px"
-                              height="108px"
-                            />
-                          </ServiceLogoSlot>
-                          <MinPara
-                            $wide={isServiceSection}
-                            dangerouslySetInnerHTML={renderInlineMarkup(item.content)}
-                          />
-                        </ServiceCard>
-                      </Col>
-                    );
-                  })}
-                </ServiceRow>
+                {hasGroups ? (
+                  <div>
+                    {groups.map((group) => (
+                      <TeamGroup key={group.title}>
+                        <TeamGroupTitle>{t(group.title)}</TeamGroupTitle>
+                        {renderCards(group.section)}
+                      </TeamGroup>
+                    ))}
+                  </div>
+                ) : (
+                  renderCards(section || [])
+                )}
               </ServiceWrapper>
             </ServiceContentWrapper>
           </ServiceSectionOuter>
