@@ -1,5 +1,6 @@
 import { Row, Col } from "antd";
 import { withTranslation, TFunction } from "react-i18next";
+import { useHistory } from "react-router-dom";
 import { Slide } from "react-awesome-reveal";
 import { Button } from "../../common/Button";
 import { SvgIcon } from "../../common/SvgIcon";
@@ -48,6 +49,7 @@ interface MiddleBlockProps {
 }
 
 const MiddleBlock = ({ title, content, button, icon, section, groups, id, t }: MiddleBlockProps) => {
+  const history = useHistory();
   const renderInlineMarkup = (value: string) => ({ __html: t(value) });
 
   const scrollTo = (id: string) => {
@@ -67,7 +69,7 @@ const MiddleBlock = ({ title, content, button, icon, section, groups, id, t }: M
       return;
     }
 
-    window.location.href = link;
+    history.push(link);
   };
 
   const hasSection = typeof section === "object" && section.length > 0;
