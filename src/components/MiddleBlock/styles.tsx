@@ -81,6 +81,58 @@ export const ContentWrapper = styled("div")`
   }
 `;
 
+export const ValueGrid = styled("div")`
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin: 3.5rem 0 0;
+`;
+
+export const ValueCard = styled("article")`
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  column-gap: 2.5rem;
+  padding: 2rem 2.25rem;
+  border-left: 2px solid #D4A017;
+  background: #fafafa;
+  text-align: left;
+
+  > div {
+    align-self: center;
+  }
+
+  @media only screen and (max-width: 575px) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+`;
+
+export const ValueTitle = styled("h3")`
+  margin: 0;
+  color: #404041;
+  font-family: "OneStoreMobileGothicBody", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+`;
+
+export const ValueSubtitle = styled("p")`
+  margin: 0.4rem 0 1rem;
+  color: #D4A017;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+`;
+
+export const ValueDescription = styled("p")`
+  margin: 0;
+  color: #606060;
+  font-size: 0.9rem;
+  line-height: 1.75;
+  white-space: pre-line;
+`;
+
 export const ServiceSectionOuter = styled("div")`
   width: 100%;
   display: flex;

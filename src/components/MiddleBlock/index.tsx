@@ -22,6 +22,11 @@ import {
   ServiceCardAction,
   TeamGroup,
   TeamGroupTitle,
+  ValueGrid,
+  ValueCard,
+  ValueTitle,
+  ValueSubtitle,
+  ValueDescription,
 } from "./styles";
 
 interface SectionItem {
@@ -37,6 +42,12 @@ interface TeamGroupItem {
   section: SectionItem[];
 }
 
+interface ValueItem {
+  title: string;
+  subtitle: string;
+  content: string;
+}
+
 interface MiddleBlockProps {
   title: string;
   content: string;
@@ -44,11 +55,12 @@ interface MiddleBlockProps {
   icon?: string;
   section?: SectionItem[];
   groups?: TeamGroupItem[];
+  values?: ValueItem[];
   id?: string;
   t: TFunction;
 }
 
-const MiddleBlock = ({ title, content, button, icon, section, groups, id, t }: MiddleBlockProps) => {
+const MiddleBlock = ({ title, content, button, icon, section, groups, values, id, t }: MiddleBlockProps) => {
   const history = useHistory();
   const renderInlineMarkup = (value: string) => ({ __html: t(value) });
 
@@ -74,6 +86,7 @@ const MiddleBlock = ({ title, content, button, icon, section, groups, id, t }: M
 
   const hasSection = typeof section === "object" && section.length > 0;
   const hasGroups = typeof groups === "object" && groups.length > 0;
+  const hasValues = typeof values === "object" && values.length > 0;
   const isServiceSection = id === "service";
   const isEcosystemSection = ["products", "companies", "brands", "teams"].includes(id || "");
   const renderCards = (items: SectionItem[]) => (
@@ -146,6 +159,19 @@ const MiddleBlock = ({ title, content, button, icon, section, groups, id, t }: M
               <Col lg={24} md={24} sm={24} xs={24}>
                 <Title dangerouslySetInnerHTML={renderInlineMarkup(title)} />
                 <Content dangerouslySetInnerHTML={renderInlineMarkup(content)} />
+                {hasValues && (
+                  <ValueGrid>
+                    {values.map((value) => (
+                      <ValueCard key={value.title}>
+                        <div>
+                          <ValueTitle>{t(value.title)}</ValueTitle>
+                          <ValueSubtitle>{t(value.subtitle)}</ValueSubtitle>
+                        </div>
+                        <ValueDescription dangerouslySetInnerHTML={renderInlineMarkup(value.content)} />
+                      </ValueCard>
+                    ))}
+                  </ValueGrid>
+                )}
                 {button && (
                   <Button name="submit" onClick={() => scrollTo("mission")}>
                     {t(button)}

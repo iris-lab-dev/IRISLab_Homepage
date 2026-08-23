@@ -15,6 +15,7 @@ const Home = () => {
         id="about"
         title={MiddleBlockContent.title}
         content={MiddleBlockContent.text}
+        values={MiddleBlockContent.values}
       />
       <ContentBlock
         direction="right"
