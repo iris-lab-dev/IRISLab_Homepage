@@ -1,6 +1,15 @@
 import { BoardItem } from "../components/Board/types";
 
 const noticeBoard: BoardItem[] = [
+  
+  {
+    id: "3",
+    category: "NOTICE",
+    title: "웹사이트 개편 안내",
+    date: "2026-08-25",
+    content: `- 메뉴 및 각종 내용 추가`,
+  },
+
   {
     id: "2",
     category: "NOTICE",
