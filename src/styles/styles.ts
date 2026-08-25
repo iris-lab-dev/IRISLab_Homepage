@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 export const Styles = createGlobalStyle`
+    @import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
 
     :root {
         --header-height: 88px;

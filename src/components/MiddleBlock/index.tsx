@@ -15,6 +15,7 @@ import {
   ServiceRow,
   ServiceCard,
   ServiceLogoSlot,
+  YniLogo,
   MinPara,
   ServiceCardTitle,
   ServiceCardSubtitle,
@@ -91,41 +92,52 @@ const MiddleBlock = ({ title, content, button, icon, section, groups, values, id
   const isEcosystemSection = ["products", "companies", "brands", "teams"].includes(id || "");
   const renderCards = (items: SectionItem[]) => (
     <ServiceRow $stacked={isEcosystemSection} gutter={isEcosystemSection ? [12, 12] : [24, 24]}>
-      {items.map((item, index) => (
-        <Col
-          key={`${item.title}-${index}`}
-          lg={isEcosystemSection ? 12 : 7}
-          md={isEcosystemSection ? 12 : 8}
-          sm={isEcosystemSection ? 24 : 12}
-          xs={24}
-        >
-          <ServiceCard $stacked={isEcosystemSection} onClick={() => navigateTo(item.link)}>
-            <ServiceLogoSlot $tight={isServiceSection}>
-              <SvgIcon src={item.icon || icon || ""} width="120px" height="120px" />
-            </ServiceLogoSlot>
-            {isEcosystemSection ? (
-              <div>
-                <ServiceCardTitle>{t(item.title || "")}</ServiceCardTitle>
-                <ServiceCardSubtitle>{t(item.subtitle || "")}</ServiceCardSubtitle>
-                <ServiceCardDescription dangerouslySetInnerHTML={renderInlineMarkup(item.content)} />
-                {item.link && (
-                  <ServiceCardAction
-                    type="button"
-                    onClick={(event) => {
-                      event.stopPropagation();
-                      navigateTo(item.link);
-                    }}
-                  >
-                    바로가기
-                  </ServiceCardAction>
+      {items.map((item, index) => {
+        const isComingSoon = item.title === "yni.kr";
+
+        return (
+          <Col
+            key={`${item.title}-${index}`}
+            lg={isEcosystemSection ? 12 : 7}
+            md={isEcosystemSection ? 12 : 8}
+            sm={isEcosystemSection ? 24 : 12}
+            xs={24}
+          >
+            <ServiceCard $stacked={isEcosystemSection} onClick={() => navigateTo(item.link)}>
+              <ServiceLogoSlot $tight={isServiceSection}>
+                {isComingSoon ? (
+                  <YniLogo aria-label="yni.kr">
+                    yni<span>.</span>kr
+                  </YniLogo>
+                ) : (
+                  <SvgIcon src={item.icon || icon || ""} width="120px" height="120px" />
                 )}
-              </div>
-            ) : (
-              <MinPara $wide={isServiceSection} dangerouslySetInnerHTML={renderInlineMarkup(item.content)} />
-            )}
-          </ServiceCard>
-        </Col>
-      ))}
+              </ServiceLogoSlot>
+              {isEcosystemSection ? (
+                <div>
+                  <ServiceCardTitle>{t(item.title || "")}</ServiceCardTitle>
+                  <ServiceCardSubtitle>{t(item.subtitle || "")}</ServiceCardSubtitle>
+                  <ServiceCardDescription dangerouslySetInnerHTML={renderInlineMarkup(item.content)} />
+                  {(item.link || isComingSoon) && (
+                    <ServiceCardAction
+                      type="button"
+                      disabled={isComingSoon}
+                      onClick={(event) => {
+                        event.stopPropagation();
+                        navigateTo(item.link);
+                      }}
+                    >
+                      {isComingSoon ? "준비 중" : "바로가기"}
+                    </ServiceCardAction>
+                  )}
+                </div>
+              ) : (
+                <MinPara $wide={isServiceSection} dangerouslySetInnerHTML={renderInlineMarkup(item.content)} />
+              )}
+            </ServiceCard>
+          </Col>
+        );
+      })}
     </ServiceRow>
   );
 

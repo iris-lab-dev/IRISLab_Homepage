@@ -9,7 +9,7 @@
         { "title": "IRIS Atelier", "subtitle": "아이리스 아틀리에 | 디자인", "content": "브랜드와 제품이 만나는 모든 순간을 세심하게 디자인합니다.", "icon": "102_아이리스아틀리에.png" },
         { "title": "IRIS Workshop", "subtitle": "아이리스 공방 | 개발", "content": "아이디어를 안정적이고 확장 가능한 서비스로 구현합니다.", "icon": "103_아이리스공방.png" },
         { "title": "IRIS Archives", "subtitle": "아이리스 서고 | R&D", "content": "새로운 기술과 인사이트를 탐구해 다음 가능성을 축적합니다.", "icon": "104_아이리스서고.png" },
-        { "title": "IRIS Hub", "subtitle": "아이리스 허브 | 유통 및 물류", "content": "제품이 고객에게 닿는 흐름을 효율적으로 연결합니다.", "icon": "logo.svg" },
+        { "title": "IRIS Hub", "subtitle": "아이리스 허브 | 유통 및 물류", "content": "제품이 고객에게 닿는 흐름을 효율적으로 연결합니다.", "icon": "105_아이리스허브.png" },
         { "title": "IRIS CP", "subtitle": "아이리스 CP | QA 및 운영", "content": "일관된 품질과 안정적인 서비스 운영을 책임집니다.", "icon": "106_아이리스CP.png" }
       ]
     },

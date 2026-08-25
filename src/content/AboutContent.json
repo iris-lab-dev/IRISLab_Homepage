@@ -4,22 +4,16 @@
   "section": [
     {
       "title": "틈틈",
-      "subtitle": "Digital solution",
-      "content": "지금, 바로. 틈틈.",
+      "subtitle": "Just, now",
+      "content": "지금, 바로.",
       "icon": "logo_tumtum.png",
       "link": "https://tumtum.kr"
     },
     {
-      "title": "Next Product",
-      "subtitle": "Coming soon",
-      "content": "새로운 제품을 준비하고 있습니다.",
+      "title": "yni.kr",
+      "subtitle": "Everyday Memories",
+      "content": "모두의 일상에 하나의 기억을",
       "icon": "product-launch.svg"
-    },
-    {
-      "title": "Future Product",
-      "subtitle": "In development",
-      "content": "더 나은 일상을 위한 제품을 설계합니다.",
-      "icon": "graphs.svg"
     }
   ]
 }

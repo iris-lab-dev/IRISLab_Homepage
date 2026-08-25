@@ -246,6 +246,19 @@ export const ServiceCard = styled("div")<{ $stacked?: boolean }>`
     `}
 `;
 
+export const YniLogo = styled("div")`
+  color: #a995d3;
+  font-family: "Jua", "Arial Rounded MT Bold", sans-serif;
+  font-size: clamp(2.05rem, 5vw, 2.7rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  text-shadow: 1px 2px #fff, 2px 2px #b7a2d7;
+
+  span {
+    color: #f2a5bd;
+  }
+`;
+
 export const ServiceLogoSlot = styled("div")<{ $tight?: boolean }>`
   width: ${({ $tight }) => ($tight ? "108px" : "100%")};
   height: 132px;
@@ -317,10 +330,15 @@ export const ServiceCardAction = styled("button")`
   font-weight: 700;
   cursor: pointer;
 
-  &:hover {
+  &:hover:not(:disabled) {
     border-color: #d4a017;
     background: #d4a017;
     color: #ffffff;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
   }
 `;
 
